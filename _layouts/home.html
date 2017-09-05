@@ -1,0 +1,39 @@
+--- 
+layout: default
+---
+
+<i class="fa fa-terminal fa-5x" aria-hidden="true"></i>
+<i class="fa fa-code fa-5x" aria-hidden="true"></i>
+<i class="fa fa-html5 fa-5x" aria-hidden="true"></i>
+<i class="fa icon-sass fa-5x"></i>
+<i class="fa fa-css3 fa-5x" aria-hidden="true"></i>
+<i class="fa icon-javascript-alt fa-5x"></i>
+
+<h2 class="subtitle is-3" style="font-family: 'Nunito', sans-serif;">
+  Soon, this <i>GitHub repo</i> will be used to post some experiences with <i>Front End</i> technology, especially ECMAScript
+  and its amazing frameworks available.
+</h2>
+<h4 class="subtitle is-4" style="font-family: 'Nunito', sans-serif;">
+  I hope the articles I'll be posting here can be useful somehow to you.
+</h4>
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  {{ content }}
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+
+      <h2>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h2>
+    </li>
+    {% endfor %}
+  </ul>
+
+</div>
