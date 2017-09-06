@@ -5,6 +5,7 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     colorator (1.1.0)
     ffi (1.9.18-x64-mingw32)
+    ffi (1.9.18-x86-mingw32)
     forwardable-extended (2.6.0)
     jekyll (3.5.2)
       addressable (~> 2.4)
@@ -29,8 +30,6 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
     mercenary (0.3.6)
-    minima (2.1.1)
-      jekyll (~> 3.3)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -52,11 +51,11 @@ GEM
 
 PLATFORMS
   x64-mingw32
+  x86-mingw32
 
 DEPENDENCIES
   jekyll (= 3.5.2)
   jekyll-feed (~> 0.6)
-  minima (~> 2.0)
   tzinfo-data
 
 BUNDLED WITH

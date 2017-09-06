@@ -5,18 +5,18 @@
 
 <body>
   <section class="hero is-fullheight" style="background-color: transparent !important;">
-    {% include header.html %}
 
     <div class="hero-body">
 
       <div class="container">
 
         <div class="columns">
-          <div class=" column is-5">
-            {% for page in site.pages %} {% if page.title %}
+          <div class=" column is-3">
+
+            {% include header.html %} {% for page in site.pages %} {% if page.title %}
             <a class="navbar-item" href="{{ page.url }}">{{ page.title }}</a> {% endif %} {% endfor %}
           </div>
-          <div class=" column is-7">
+          <div class=" column is-9">
             {{ content }}
           </div>
         </div>
