@@ -11,8 +11,15 @@
 
       <div class="container">
 
-        {{ content }}
-
+        <div class="columns">
+          <div class=" column is-5">
+            {% for page in site.pages %} {% if page.title %}
+            <a class="navbar-item" href="{{ page.url }}">{{ page.title }}</a> {% endif %} {% endfor %}
+          </div>
+          <div class=" column is-7">
+            {{ content }}
+          </div>
+        </div>
       </div>
 
     </div>
