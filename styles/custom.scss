@@ -1,7 +1,3 @@
----
-# Front matter comment to ensure Jekyll properly reads file.
----
-
 /*
 font-family: 'Anton', sans-serif;
 font-family: 'Nunito', sans-serif;
@@ -38,5 +34,5 @@ a {
 @import
   //"base",
   //"layout",
-  "syntax-highlighting"
+  "../_sass/syntax-highlighting"
 ;
