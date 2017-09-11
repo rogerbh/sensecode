@@ -50,7 +50,8 @@ h1,h2,h3,h4,h5,h6,p,span{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 24px;
     text-align: right;
-    transition: background-color .1s ease, color .1s ease; 
+    transition-property: background-color, color, padding-right;
+    transition: .2s ease; 
     background-color: #eee; 
     color: #444;
     display: flex;
@@ -58,7 +59,8 @@ h1,h2,h3,h4,h5,h6,p,span{
     padding: 10px;
     &:hover{
       color: #fff;
-      background-color: #209c97; 
+      background-color: #209c97;
+      padding-right: 30px; 
     }
 
     -webkit-box-shadow: inset -21px 0px 4px -20px rgba(0,0,0,0.1);
