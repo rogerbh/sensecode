@@ -29,6 +29,31 @@ body {
 h1, h2, h3, h4, h5, h6, p, span {
   font-family: 'Roboto Condensed', sans-serif; }
 
+h2.page-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 40px;
+  display: inline-block;
+  border-top-color: #ffba34;
+  border-top-style: solid;
+  border-top-width: 0;
+  animation-name: pageTitleBorder;
+  animation-duration: .5s;
+  /* or: Xms */
+  animation-timing-function: ease-out;
+  /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+  animation-fill-mode: forwards;
+  /* or: backwards, both, none */
+  animation-delay: .5s;
+  /* or: Xms */ }
+
+@keyframes pageTitleBorder {
+  0% {
+    opacity: 0;
+    border-top-width: 0; }
+  100% {
+    opacity: 1;
+    border-top-width: 70px; } }
+
 .fa {
   vertical-align: initial; }
 
