@@ -70,7 +70,7 @@ h2.page-title{
   flex-direction: column;
   height: 100%;
 
-  li{display: flex; flex: 1; border-bottom: solid 1px #ddd;}
+  li{display: flex; flex: 1; border-bottom: solid 1px #ddd; overflow: hidden; position: relative;}
 
   li a{
     @extend .flex-combo;
@@ -96,6 +96,30 @@ h2.page-title{
 
   }
 
+  li a::before{
+    font-family: FontAwesome;
+    position: absolute;
+    left: 200px;
+    transform: rotate(25deg);
+    top: -30px;
+    opacity: 0;
+    color: #fff;
+    font-size: 80px;
+    transition: transform .35s cubic-bezier(0.770, 0.000, 0.175, 1.000),
+    opacity .35s cubic-bezier(0.770, 0.000, 0.175, 1.000),
+    left .35s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  }  
+
+  li:nth-of-type(1) a::before{content: '\f13b';}
+  li:nth-of-type(2) a::before{content: '\f13c';}
+  li:nth-of-type(3) a::before{font-family: "FontMfizz"; content: '\f142';}
+
+  li a:hover::before{
+    opacity: 1;
+    left: 25px;
+    transform: rotate(-20deg);
+  }
+
 }
 
 a {
@@ -112,6 +136,7 @@ a {
 .brand-link{
   font-family: 'Nunito', sans-serif; 
   margin:0 auto;
+  perspective: 900px;
 }
 .site-name{
   font-family: 'Nunito', sans-serif; 
@@ -125,6 +150,8 @@ a {
 .brand-link img{max-height: initial;}
 
 .footer-holder{border-top:solid 1px #ddd;}
+svg{transition: transform .35s cubic-bezier(0.770, 0.000, 0.175, 1.000)}
+svg:hover{transform-style: preserve-3d; transform: rotateX(180deg)}
 
 // Import partials.
 @import "../_sass/syntax-highlighting";
