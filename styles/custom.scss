@@ -89,6 +89,11 @@ h2.page-title{
       background-color: #209c97;
       padding-right: 30px; 
     }
+    &:active{
+      color: #fff;
+      background-color: #209c97;
+      padding-right: 30px;
+    }
 
     -webkit-box-shadow: inset -21px 0px 4px -20px rgba(0,0,0,0.1);
     -moz-box-shadow: inset -21px 0px 4px -20px rgba(0,0,0,0.1);
@@ -114,7 +119,7 @@ h2.page-title{
   li:nth-of-type(2) a::before{content: '\f13c';}
   li:nth-of-type(3) a::before{font-family: "FontMfizz"; content: '\f142';}
 
-  li a:hover::before{
+  li a:hover::before, li a:active::before{
     opacity: 1;
     left: 25px;
     transform: rotate(-20deg);

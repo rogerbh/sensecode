@@ -92,6 +92,10 @@ h2.page-title {
       color: #fff;
       background-color: #209c97;
       padding-right: 30px; }
+    .menu-list li a:active {
+      color: #fff;
+      background-color: #209c97;
+      padding-right: 30px; }
   .menu-list li a::before {
     font-family: FontAwesome;
     position: absolute;
@@ -109,7 +113,7 @@ h2.page-title {
   .menu-list li:nth-of-type(3) a::before {
     font-family: "FontMfizz";
     content: '\f142'; }
-  .menu-list li a:hover::before {
+  .menu-list li a:hover::before, .menu-list li a:active::before {
     opacity: 1;
     left: 25px;
     transform: rotate(-20deg); }
