@@ -4,19 +4,19 @@
 {% include head.html %}
 
 <body class="h-100">
-  <div class="site-holder d-flex h-100">
-    <div class="menu-col fixed-pos bg-light h-100">
+  <div class="site-holder d-flex h-100" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
+    <div class="menu-col fixed-pos bg-light h-100" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
       <div class="container" style="flex: .5;display: flex;justify-content: center;flex-direction: column;-webkit-box-shadow: inset -21px 0px 4px -20px rgba(0,0,0,0.1);
       -moz-box-shadow: inset -21px 0px 4px -20px rgba(0,0,0,0.1);
       box-shadow: inset -21px 0px 4px -20px rgba(0,0,0,0.1);">
         {% include header.html %}
       </div>
-      <div class="container" style="flex: 1;display: flex;justify-content: center;flex-direction: column;">
-        <div class="row" style="flex:1;">
-          <div class="col-xs-12" style="flex:1;">
-            <ul class="menu-list">
+      <div onclick="void(0)" class="container" style="flex: 1;display: flex;justify-content: center;flex-direction: column;">
+        <div class="row" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
+          <div class="col-xs-12" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
+            <ul class="menu-list" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
               {% for page in site.pages %} {% if page.title %}
-              <li>
+              <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
                 <a class="navbar-item" href="{{ page.url }}">{{ page.title }}</a>
               </li>
               {% endif %} {% endfor %}
