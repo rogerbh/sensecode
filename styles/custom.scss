@@ -16,6 +16,12 @@ font-family: 'Pontano Sans', sans-serif;
     flex-direction: column;
 }
 
+.reset-flex{
+  flex: initial;
+  justify-content: initial;
+  flex-direction: initial;
+}
+
 body{
     background: #f2f2f2
 }
@@ -153,6 +159,37 @@ a {
 }
 
 .brand-link img{max-height: initial;}
+
+.post-list{
+  @extend .flex-combo;
+  list-style-type: none;
+  list-style-position:inside;
+  padding: 15px;
+  padding-right: 0;
+  margin: 0;
+
+  li{
+    padding: 15px;
+    background: #3158ab;
+    border-right: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 250px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+/*     & *{
+    }  */
+    &:first-child{
+      flex: 5 0 45%;
+      min-height: 350px;
+      background: orangered;
+    }
+  }
+
+}
 
 .footer-holder{border-top:solid 1px #ddd;}
 svg{transition: transform .35s cubic-bezier(0.770, 0.000, 0.175, 1.000)}
