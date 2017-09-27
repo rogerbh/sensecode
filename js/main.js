@@ -12,11 +12,19 @@ else if (document.addEventListener){
 // FIM equivalente ao document.ready da biblioteca jQuery
 
 function randomPostWidth(){
-    const postList = document.querySelector('ul.post-list');
-    var eachPost = postList.childNodes,
-    numberOfPosts = eachPost.length;
+    const postList = document.querySelector('ul.post-list'),
+    eachPost = postList.children;
+
+    var numberOfPosts = eachPost.length,
+    basisVal;
 
     for(var i = 0; i < numberOfPosts; i++){
-        
+        basisVal = randomIntFromInterval(20,45);
+        eachPost[i].style['flex-basis'] = basisVal + '%';
     }
+}
+
+//método para gerar um número inteiro em determinado intervalo
+function randomIntFromInterval(min,max){
+    return Math.floor(Math.random()*(max-min+1)+min);
 }
