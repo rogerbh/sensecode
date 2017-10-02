@@ -26,12 +26,16 @@ body{
     background: #f2f2f2
 }
 
+a{color: inherit;}
+a:hover{text-decoration: none;}
+
 .fixed-pos{position: fixed;}
 .menu-col{
   @extend .flex-combo;
-  width: 300px;
+  width: 25vw;
+  height: 100%;
 }
-.content-col{margin-left: 300px;}
+.content-col{margin-left: 25vw;}
 
 h1,h2,h3,h4,h5,h6,p,span{
      font-family: 'Roboto Condensed', sans-serif;
@@ -76,7 +80,18 @@ h2.page-title{
   flex-direction: column;
   height: 100%;
 
-  li{display: flex; flex: 1; border-bottom: solid 1px #ddd; overflow: hidden; position: relative;}
+  li{
+    display: flex; flex: 1; border-bottom: solid 1px #ddd; overflow: hidden; position: relative;
+    &:nth-child(1) a:hover{
+      background-color: #3158ab !important;
+    }
+    &:nth-child(2) a:hover{
+      background-color: #ff8e34 !important;
+    }
+    &:nth-child(3) a:hover{
+      background-color: #ffba34 !important;
+    }
+  }
 
   li a{
     @extend .flex-combo;
@@ -110,7 +125,7 @@ h2.page-title{
   li a::before{
     font-family: FontAwesome;
     position: absolute;
-    left: 200px;
+    left: 150px;
     transform: rotate(25deg);
     top: -30px;
     opacity: 0;
@@ -122,7 +137,7 @@ h2.page-title{
   }  
 
   li:nth-of-type(1) a::before{content: '\f13b';}
-  li:nth-of-type(2) a::before{content: '\f13c';}
+  li:nth-of-type(2) a::before{font-family: "FontMfizz"; content: '\f116';}
   li:nth-of-type(3) a::before{font-family: "FontMfizz"; content: '\f142';}
 
   li a:hover::before, li a:active::before{
@@ -133,21 +148,12 @@ h2.page-title{
 
 }
 
-a {
-  color: #209c97;
-  &:hover{
-    text-decoration: none;
-    color: inherit;
-  }
-}
-
 .fa{padding-right: 5px;}
 
-.brand-holder{}
+/*.brand-holder{}*/
 .brand-link{
   font-family: 'Nunito', sans-serif; 
   margin:0 auto;
-  perspective: 3000px;
 }
 .site-name{
   font-family: 'Nunito', sans-serif; 
@@ -169,7 +175,6 @@ a {
   margin: 0;
 
   li{
-    padding: 15px;
     background: #fff;
     display: flex;
     flex: 1 1 auto;
@@ -181,21 +186,81 @@ a {
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
     transform: scale(1,1);
     transition: all .15s ease-out;
+    overflow: hidden;
     &:hover{
       box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-      transform: scale(1.03,1.03);
+      transform: scale(1.01,1.01);
+    }
+    a{
+      transition: border-bottom-color .15s ease-out;
+      display: flex;
+      padding: 15px;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      color: #209c97;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      border-bottom-color: transparent;
+      h2{
+        transition: color .15s ease-out;
+        color:inherit;
+      }
+      &:hover{
+        text-decoration: none;
+        border-bottom-color: #2d58b3;
+        h2{
+          color:#2d58b3;
+        }
+      }
+      &::after{
+        position: absolute;
+        padding: 15px;
+        display: inline-block;
+        bottom: 0;
+        right: 30px;
+        color: inherit;
+        opacity: 0;
+        font-family: FontAwesome;
+        content: '\f054';
+        transition: all .15s ease-out;
+      }
+      &:hover::after{
+        right: 0;
+        color:#2d58b3;
+        opacity: 1;
+      }
     } 
     &:first-child{
       flex: 5 0 50% !important;
-      background: orangered;
+      a::before{
+        position: absolute;
+        font-family: FontAwesome;
+        content: '\f02e';
+        color: #ffba34;
+        top: -3px;
+        right: 20px;
+        font-size: 30px;
+        line-height: normal;
+        transition: all .15s ease-out;
+      }
+      a:hover::before{
+        top: -5px;
+        font-size: 35px;
+      }
     }
   }
 
 }
 
 .footer-holder{border-top:solid 1px #ddd;}
-svg{transition: transform .35s cubic-bezier(0.770, 0.000, 0.175, 1.000)}
-svg:hover{transform-style: preserve-3d; transform: rotateX(360deg)}
+svg{transition: margin .15s ease-out}
+svg:hover{margin-bottom: 20px; margin-top: 20px;}
+
+.page-holder, .post-page-holder{
+  margin: 0;
+  padding: 15px;
+}
 
 // Import partials.
 @import "../_sass/syntax-highlighting";
