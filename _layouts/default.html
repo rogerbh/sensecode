@@ -3,8 +3,8 @@
 
 {% include head.html %}
 
-<body class="h-100" ontouchstart="void(0)">
-  <div class="site-holder d-flex" style="display: flex;flex-direction: column;">
+<body class="h-100 bg-light" ontouchstart="void(0)">
+  <div class="site-holder d-flex h-100" style="flex-direction: column;">
     <!--Coluna do menu e logo-->
     <div class="menu-col fixed-pos h-100 d-flex" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
       
@@ -37,7 +37,7 @@
       </div>
     </div>
     <!--Coluna de conteúdo-->
-    <div class="content-col" style="background-color:#efefef">
+    <div class="content-col h-100 bg-light">
       {{ content }}
       {% include footer.html %}
     </div>
