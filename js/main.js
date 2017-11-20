@@ -13,7 +13,7 @@ else if (document.addEventListener){
 
 function randomPostWidth(){
     const postList = document.querySelector('ul.post-list'),
-    eachPost = postList.children;
+    eachPost = postList.querySelectorAll('li');
 
     var numberOfPosts = eachPost.length,
     basisVal;
@@ -21,10 +21,33 @@ function randomPostWidth(){
     for(var i = 0; i < numberOfPosts; i++){
         basisVal = randomIntFromInterval(20,45);
         eachPost[i].style['flex-basis'] = basisVal + '%';
+
+        //seta a cor da borda de topo de cada post
+        eachPost[i].style.borderColor = get_random_color();
+        eachPost[i].querySelector('h2').style.color = eachPost[i].style.borderTopColor
+
+        eachPost[i].firstElementChild.addEventListener("mouseleave", function(e){
+            this.style.borderBottomColor = 'transparent';
+        });
+        eachPost[i].firstElementChild.addEventListener("mouseenter", function(){
+            this.style.borderBottomColor = this.parentNode.style.borderTopColor;
+        });
     }
 }
 
 //método para gerar um número inteiro em determinado intervalo
 function randomIntFromInterval(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+//métodos para gerar cores aleatórias
+function rand(min, max) {
+    return parseInt(Math.random() * (max-min+1), 10) + min;
+}
+
+function get_random_color() {
+    var h = rand(1, 300); // color hue between 1 and 360
+    var s = rand(30, 50); // saturation 30-100%
+    var l = rand(45, 55); // lightness 30-70%
+    return 'hsl(' + h + ',' + s + '%,' + l + '%)';
 }
