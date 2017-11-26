@@ -39,8 +39,7 @@ a:hover {
 .menu-col {
   transition: margin-left .5s ease-out;
   width: 25vw;
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
 
 .content-col {
   transition: margin-left .5s ease-out;
@@ -336,16 +335,27 @@ h2.page-title {
 @media (max-width: 767px) {
   .menu-col {
     transition: all .5s ease-out;
-    margin-left: -187px;
+    margin-left: -25vw;
     z-index: 1;
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5); }
     .menu-col .brand-holder {
-      padding-top: 35px !important; }
+      width: 80px;
+      /* position: relative; */
+      margin-left: 23vw;
+      display: flex;
+      flex: 1 0 350px;
+      margin-top: 55px; }
+      .menu-col .brand-holder .icons-holder {
+        display: none; }
     .menu-col .brand-link {
-      position: relative; }
+      flex: 1;
+      opacity: .8;
+      width: 100%;
+      align-items: center;
+      padding: 15px 0; }
     .menu-col .btn-toggle-menu {
       position: absolute;
-      left: 187px;
+      left: 25vw;
       top: 0;
       background: #209c97;
       width: 80px;
@@ -353,20 +363,23 @@ h2.page-title {
       color: #fff;
       display: flex;
       align-items: center;
-      font-size: 16px;
+      font-size: 21px;
       justify-content: center; }
+    .menu-col div:nth-of-type(2)[class~=container] {
+      justify-content: flex-start !important;
+      flex: 1 !important;
+      overflow: visible !important; }
   .content-col {
     transition: margin-left .5s ease-out;
     margin-left: 80px;
     z-index: 0; }
   svg {
-    margin-left: 182px; }
+    align-self: flex-start; }
   .site-name {
-    position: absolute;
     transform: rotate(-90deg);
-    left: 137px !important;
-    display: block !important;
-    top: 130px; } }
+    display: flex;
+    white-space: nowrap;
+    margin-top: 80px !important; } }
 
 @media (max-width: 1150px) {
   .brand-holder {
