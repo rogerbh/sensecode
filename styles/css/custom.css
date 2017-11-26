@@ -348,9 +348,6 @@ h2.page-title {
       .menu-col .brand-holder .icons-holder {
         display: none; }
     .menu-col .brand-link {
-      flex: 1;
-      opacity: .8;
-      width: 100%;
       align-items: center;
       padding: 15px 0; }
     .menu-col .btn-toggle-menu {
