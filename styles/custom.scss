@@ -369,7 +369,7 @@ h2.page-title{
 }
 
 @media (max-width: 576px){
-  .post-list{flex-direction: column !important;}
+  .post-list{flex-direction: column !important; flex-wrap: nowrap !important;}
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -384,17 +384,18 @@ h2.page-title{
     box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
     .brand-holder{
       width: 80px;
-      /* position: relative; */
-      margin-left: 23vw;
+      position: absolute;
       display: flex;
       flex: 1 0 350px;
-      margin-top: 55px;
+      top: 55px;
+      left: 25vw;
       
       .icons-holder{
         display: none;
       }
     }
     .brand-link{
+      width: 100%;
       align-items: center;
       padding: 15px 0;
     }
@@ -403,10 +404,9 @@ h2.page-title{
       position: absolute;
       left: 25vw;
       top: 0;
-      background: #209c97;
       width: 80px;
       height: 50px;
-      color: #fff;
+      color: #209c97;
       display: flex;
       align-items: center;
       font-size: 21px;
@@ -424,6 +424,8 @@ h2.page-title{
     transition: margin-left .5s ease-out;
     margin-left: 80px;
     z-index: 0;
+    height: auto !important;
+
   }
 
   svg{align-self: flex-start;}
