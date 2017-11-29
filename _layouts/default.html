@@ -38,7 +38,7 @@
 
 
       <!-- mobile menu -->
-      <div id="menuMobile" class="d-md-none;">
+      <div id="menuMobile" style="display:none;">
         <ul class="menu-list-mobile" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
           {% for page in site.pages %} {% if page.title %}
           <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
@@ -51,9 +51,7 @@
     </div>
     <!--Coluna de conteúdo-->
     <div class="content-col h-100 bg-light">
-      <div class="overlay-menu-mobile">
-        
-      </div>
+      <div class="overlay-menu-mobile" style="display:none;"></div>
       {{ content }} {% include footer.html %}
     </div>
 

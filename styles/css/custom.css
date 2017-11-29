@@ -419,7 +419,8 @@ h2.page-title {
       display: flex;
       align-items: center;
       font-size: 21px;
-      justify-content: center; }
+      justify-content: center;
+      cursor: pointer; }
     .menu-col div:nth-of-type(2)[class~=container] {
       justify-content: flex-start !important;
       flex: 1 !important;
