@@ -61,7 +61,11 @@ btnMenuMobile.addEventListener("click", function () {
 });
 */
 
-$('body').on('click', '.btn-toggle-menu', function(){
+$('body').on('click', '.btn-toggle-menu', function () {
+    $(this).toggleClass(function () {
+        return $(this).is('.menu-open, .menu-close') ? 'menu-open menu-close' : 'menu-open';
+    });
+
     $('#menuMobile').toggle();
     $('.overlay-menu-mobile').toggle();
 });

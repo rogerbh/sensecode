@@ -160,6 +160,9 @@ h2.page-title{
 .brand-link{
   font-family: 'Nunito', sans-serif; 
   margin:0 auto;
+  &:hover{
+    color: #209c97;
+  }
 }
 .site-name{
   font-family: 'Nunito', sans-serif; 
@@ -172,16 +175,24 @@ h2.page-title{
 }
 
 .slogan-home{
-  font-family: 'Kalam', cursive;
-  font-size: 16px;
+  font-family: 'Nunito', sans-serif; 
+  font-size: 30px;
   display: block;
   color: #555;
-  padding: 15px 0 12px 15px;
+  padding: 12px 0 12px 15px;
   margin: 0 15px 5px 15px;
   line-height: initial;
   text-align: right;
   border-bottom: solid 1px #ccc;
   box-shadow: 0px 5px 2px -4px rgba(0,0,0,.05);
+  span{
+      color: tomato;
+      font-family: inherit;
+      &:before{
+        font-family: FontAwesome;
+        content: '\f120';
+      }
+  }
 }
 
 .icons-holder{
@@ -381,8 +392,6 @@ h2.page-title{
     
     z-index: 1;
 
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
-
     #menuMobile{
       z-index: 6;
       flex: 1;
@@ -473,12 +482,109 @@ h2.page-title{
       top: 0;
       width: 80px;
       height: 50px;
-      color: #209c97;
       display: flex;
       align-items: center;
       font-size: 21px;
       justify-content: center;
       cursor: pointer;
+      overflow: hidden;
+      &:before{
+        color: #209c97;
+        position: absolute;
+        font-family: FontAwesome;
+        content: '\f0c9';
+        margin-top: 0;
+        opacity: 1;
+      }
+      &:after{
+        color: tomato;
+        position: absolute;
+        font-family: FontAwesome;
+        content: '\f00d';
+        margin-top: 35px;
+        opacity: 0;
+      }
+      &.menu-open:before{
+        opacity: 1;
+        margin-top: 0;
+        animation-name: hideMenuIcon;
+        animation-duration: .15s; /* or: Xms */
+        animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+        animation-fill-mode: forwards; /* or: backwards, both, none */
+        animation-delay: .1s;
+      }
+      &.menu-open:after{
+        opacity: 0;
+        margin-top: 35px;
+        animation-name: showCloseIcon;
+        animation-duration: .15s; /* or: Xms */
+        animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+        animation-fill-mode: forwards; /* or: backwards, both, none */
+        animation-delay: .1s;
+      }
+
+      &.menu-close:before{
+        opacity: 0;
+        margin-top: -35px;
+        animation-name: showMenuIcon;
+        animation-duration: .15s; /* or: Xms */
+        animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+        animation-fill-mode: forwards; /* or: backwards, both, none */
+        animation-delay: .1s;
+      }
+      &.menu-close:after{
+        opacity: 1;
+        margin-top: 0;
+        animation-name: hideCloseIcon;
+        animation-duration: .15s; /* or: Xms */
+        animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+        animation-fill-mode: forwards; /* or: backwards, both, none */
+        animation-delay: .1s;
+      }
+    }
+
+    @keyframes hideMenuIcon {
+      0%   {
+        margin-top:0;
+        opacity: 1;
+       }
+      100%   {
+        margin-top:-35px;
+        opacity: 0;
+       }
+    }
+
+    @keyframes showCloseIcon {
+      0%   {
+        margin-top:35;
+        opacity: 0;
+       }
+      100%   {
+        margin-top:0;
+        opacity: 1;
+       }
+    }
+
+    @keyframes hideCloseIcon {
+      0%   {
+        margin-top:0;
+        opacity: 1;
+       }
+      100%   {
+        margin-top:35px;
+        opacity: 0;
+       }
+    }
+
+    @keyframes showMenuIcon {
+      0%   {
+        margin-top:-35px;
+        opacity: 0;
+       }
+      100%   {
+        margin-top:0;
+        opacity: 1;
+       }
     }
 
     div:nth-of-type(2)[class~=container]{
