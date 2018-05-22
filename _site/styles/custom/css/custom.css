@@ -359,7 +359,7 @@ h2.page-title {
   margin-right: 15px;
   margin-bottom: 15px;
   transform: scale(1, 1);
-  transition: all .25s ease-out;
+  transition: all .1s ease-out;
   overflow: hidden;
 }
 /* line 289, ../custom.scss */
