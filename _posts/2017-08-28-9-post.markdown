@@ -2,7 +2,7 @@
 layout: post
 title:  "A first post!"
 date:   2017-08-28 22:14:14 -0300
-category: js-posts
+category: test
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
