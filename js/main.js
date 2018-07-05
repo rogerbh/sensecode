@@ -12,26 +12,28 @@ else if (document.addEventListener) {
 // FIM equivalente ao document.ready da biblioteca jQuery
 
 function randomPostWidth() {
-    const postList = document.querySelector('ul.post-list'),
-        eachPost = postList.querySelectorAll('li');
+    const postList = document.querySelector('ul.post-list');
+    if (postList) {
+        var eachPost = postList.querySelectorAll('li');
 
-    var numberOfPosts = eachPost.length,
-        basisVal;
+        var numberOfPosts = eachPost.length,
+            basisVal;
 
-    for (var i = 0; i < numberOfPosts; i++) {
-        basisVal = randomIntFromInterval(20, 45);
-        eachPost[i].style['flex-basis'] = basisVal + '%';
+        for (var i = 0; i < numberOfPosts; i++) {
+            basisVal = randomIntFromInterval(20, 45);
+            eachPost[i].style['flex-basis'] = basisVal + '%';
 
-        //seta a cor da borda de topo de cada post
-        eachPost[i].style.borderColor = get_random_color();
-        eachPost[i].querySelector('h2').style.color = eachPost[i].style.borderTopColor
+            //seta a cor da borda de topo de cada post
+            eachPost[i].style.borderColor = get_random_color();
+            eachPost[i].querySelector('h2').style.color = eachPost[i].style.borderTopColor
 
-        eachPost[i].firstElementChild.addEventListener("mouseleave", function (e) {
-            this.style.borderBottomColor = 'transparent';
-        });
-        eachPost[i].firstElementChild.addEventListener("mouseenter", function () {
-            this.style.borderBottomColor = this.parentNode.style.borderTopColor;
-        });
+            eachPost[i].firstElementChild.addEventListener("mouseleave", function (e) {
+                this.style.borderBottomColor = 'transparent';
+            });
+            eachPost[i].firstElementChild.addEventListener("mouseenter", function () {
+                this.style.borderBottomColor = this.parentNode.style.borderTopColor;
+            });
+        }
     }
 }
 

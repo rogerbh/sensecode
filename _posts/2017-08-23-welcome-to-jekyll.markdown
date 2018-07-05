@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to JekyllUiuiuiuiui!"
+title:  "Welcome to Jekyll!"
 date:   2017-08-23 22:14:14 -0300
 categories: js-posts
 ---
