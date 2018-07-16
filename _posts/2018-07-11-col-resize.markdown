@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Resizing Columns with css and js. A flexbox aproach."
+title:  "Resizing Columns with css and js.\n
+A flexbox aproach."
 #date:   2017-08-28 22:14:14 -0300
 category: js-posts
 ---
