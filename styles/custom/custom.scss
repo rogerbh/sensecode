@@ -53,6 +53,12 @@ h1,h2,h3,h4,h5,h6,p,span{
     font-family: 'Pontano Sans', sans-serif;
 }
 
+article.post,
+.page-content{
+  display: flex;
+  flex-direction: column;
+}
+
 .post-header{
   border-bottom: solid 1px #ddd;
   padding-bottom: 15px;
@@ -66,6 +72,7 @@ h1,h2,h3,h4,h5,h6,p,span{
           display: inline-flex;
     margin: 0;
     white-space: pre-line;
+    font-size: 2rem;
     }
 
   .post-meta{
@@ -136,7 +143,8 @@ h2.page-title{
   }
 
   li a::before{
-    font-family: FontAwesome;
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
     position: absolute;
     left: 150px;
     transform: rotate(25deg);
@@ -195,8 +203,9 @@ h2.page-title{
   span{
       color: tomato;
       font-family: inherit;
-      &:before{
-        font-family: FontAwesome;
+      &::before{
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
         content: '\f120';
       }
   }
@@ -311,8 +320,9 @@ h2.page-title{
       border-bottom-width: 1px;
       border-bottom-color: transparent;
       .post-meta{
-        &:before{
-          font-family: FontAwesome;
+        &::before{
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 400;
           content: '\f073';
           padding-right: 5px;
         }
@@ -338,7 +348,8 @@ h2.page-title{
         right: 30px;
         color: inherit;
         opacity: 0;
-        font-family: FontAwesome;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
         content: '\f054';
         transition: all .15s ease-out;
       }
@@ -356,7 +367,8 @@ h2.page-title{
       flex: 5 0 50% !important;
       a::before{
         position: absolute;
-        font-family: FontAwesome;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
         content: '\f02e';
         color: #ffba34;
         top: -3px;
@@ -498,18 +510,20 @@ h2.page-title{
       justify-content: center;
       cursor: pointer;
       overflow: hidden;
-      &:before{
+      &::before{
         color: #209c97;
         position: absolute;
-        font-family: FontAwesome;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
         content: '\f0c9';
         margin-top: 0;
         opacity: 1;
       }
-      &:after{
+      &::after{
         color: tomato;
         position: absolute;
-        font-family: FontAwesome;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
         content: '\f00d';
         margin-top: 35px;
         opacity: 0;
@@ -523,7 +537,7 @@ h2.page-title{
         animation-fill-mode: forwards; /* or: backwards, both, none */
         animation-delay: .1s;
       }
-      &.menu-open:after{
+      &.menu-open::after{
         opacity: 0;
         margin-top: 35px;
         animation-name: showCloseIcon;
@@ -533,7 +547,7 @@ h2.page-title{
         animation-delay: .1s;
       }
 
-      &.menu-close:before{
+      &.menu-close::before{
         opacity: 0;
         margin-top: -35px;
         animation-name: showMenuIcon;
@@ -542,7 +556,7 @@ h2.page-title{
         animation-fill-mode: forwards; /* or: backwards, both, none */
         animation-delay: .1s;
       }
-      &.menu-close:after{
+      &.menu-close::after{
         opacity: 1;
         margin-top: 0;
         animation-name: hideCloseIcon;
@@ -676,6 +690,47 @@ h2.page-title{
     }
   }
   
+}
+
+.share-page{
+  display: inline-flex;
+  align-self: flex-end;
+  padding: 5px;
+  background: #f5f5f5;
+  box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.09);
+  border-radius: 2px;
+  margin-bottom: 15px;
+
+  a{
+    padding: 0 5px;
+    &::before{
+      font-family: 'Font Awesome 5 Brands';
+    }
+  }
+  .share-twitter{
+    color: dodgerblue;
+    &::before{
+      content:'\f099';
+    }
+  }
+  .share-facebook{
+    color: #3158ab;
+    &::before{
+      content:'\f39e';
+    }
+  }
+  .share-googleplus{
+    color: brown;
+    &::before{
+      content:'\f2b3';
+    }
+  }
+  .share-linkedin{
+    color: royalblue;
+    &::before{
+      content:'\f0e1';
+    }
+  }
 }
 
 // Import partials.

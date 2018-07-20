@@ -3,7 +3,9 @@ layout: default
 ---
 
 <div class="post-page-holder">
+    <div class="page-content">
+        <h2 class="page-title">{{ page.title }}</h2>
         {% include share.html %}
-    <h2 class="page-title">{{ page.title }}</h2>
-    {{ content }}
+        {{ content }}
+    </div>
 </div>
