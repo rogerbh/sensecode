@@ -818,49 +818,52 @@ h2.page-title {
 .share-page {
   display: inline-flex;
   align-self: flex-end;
-  padding: 5px;
-  background: #f5f5f5;
-  box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.09);
-  border-radius: 2px;
+  padding: 3px 10px;
   margin-bottom: 15px;
+  font-family: 'Pontano Sans', sans-serif;
+  border: solid 1px #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 0;
 }
-/* line 704, ../custom.scss */
+/* line 707, ../custom.scss */
 .share-page a {
   padding: 0 5px;
 }
-/* line 706, ../custom.scss */
+/* line 709, ../custom.scss */
 .share-page a::before {
   font-family: 'Font Awesome 5 Brands';
 }
-/* line 710, ../custom.scss */
+/* line 713, ../custom.scss */
 .share-page .share-twitter {
   color: dodgerblue;
 }
-/* line 712, ../custom.scss */
+/* line 715, ../custom.scss */
 .share-page .share-twitter::before {
   content: '\f099';
 }
-/* line 716, ../custom.scss */
+/* line 719, ../custom.scss */
 .share-page .share-facebook {
   color: #3158ab;
 }
-/* line 718, ../custom.scss */
+/* line 721, ../custom.scss */
 .share-page .share-facebook::before {
   content: '\f39e';
 }
-/* line 722, ../custom.scss */
+/* line 725, ../custom.scss */
 .share-page .share-googleplus {
   color: brown;
 }
-/* line 724, ../custom.scss */
+/* line 727, ../custom.scss */
 .share-page .share-googleplus::before {
   content: '\f2b3';
 }
-/* line 728, ../custom.scss */
+/* line 731, ../custom.scss */
 .share-page .share-linkedin {
   color: royalblue;
 }
-/* line 730, ../custom.scss */
+/* line 733, ../custom.scss */
 .share-page .share-linkedin::before {
   content: '\f0e1';
 }
