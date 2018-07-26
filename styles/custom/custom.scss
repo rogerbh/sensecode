@@ -695,11 +695,14 @@ h2.page-title{
 .share-page{
   display: inline-flex;
   align-self: flex-end;
-  padding: 5px;
-  background: #f5f5f5;
-  box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.09);
-  border-radius: 2px;
+  padding: 3px 10px;
   margin-bottom: 15px;
+  font-family: 'Pontano Sans', sans-serif;
+  border: solid 1px #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.1);
+    border-top-right-radius: 0;
 
   a{
     padding: 0 5px;
