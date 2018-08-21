@@ -1,0 +1,28 @@
+--- 
+layout: default
+---
+
+<div class="home">
+
+  <span class="slogan-home">
+        <span>web design-----</span> & frontEnd dev experiments
+      </span>
+
+  <ul class="d-flex flex-wrap post-list" style="flex-direction: row; flex:initial;">
+    {% for post in site.categories[page.category] %}
+    <li>
+      <a class="post-link" href="{{ post.url | relative_url }}">
+
+      <span class="post-meta">{{ post.date |  date: "%d/%m/%Y"  }}</span>
+
+      <h2>{{ post.title | escape }}</h2>
+      
+      <p class="post-resume">
+        {{ post.content | strip_html | truncatewords: 15 }}
+      </p>
+    </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+</div>
