@@ -4,7 +4,7 @@ title:  "Welcome to Jekyll!"
 date:   2017-08-23 22:14:14 -0300
 categories: html-posts
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+You’llllllllllllllllllllll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 ![My helpful screenshot]({{ "/images/cat.jpg" | absolute_url }})
 

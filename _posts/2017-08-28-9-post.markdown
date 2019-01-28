@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A first post!"
+title:  "A second post!"
 date:   2017-08-28 22:14:14 -0300
 category: js-posts
 ---
