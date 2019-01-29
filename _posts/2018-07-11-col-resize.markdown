@@ -3,7 +3,7 @@ layout: post
 title:  "Resizing Columns with css and js.\n
 A flexbox aproach."
 #date:   2017-08-28 22:14:14 -0300
-category: js-posts
+category: css-posts
 ---
 This post is for those who would like to implement a column resizer to their websites. Something similar to the panels in [jsfiddle.net](http://jsfiddle.net/)
 
