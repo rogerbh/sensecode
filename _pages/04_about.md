@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+![AAAAAAAAAAAAAAAAAAAhhhhhhhhhhhhhh]({{ "/images/cat.jpg" | absolute_url }})
+
 Excuse me. Erased from existence. Uh, well, okay Biff, uh, I'll finish that on up tonight and I'll bring it over first thing tomorrow morning. Good, there's somebody I'd like you to meet. Lorraine. Of course I do. Just a second, let's see if I could find it.
 
 Nah, I just don't think I'm cut out for music. Ah. Thank god I still got my hair. What on Earth is that thing I'm wearing? Y'know this time it wasn't my fault. The Doc set all of his clocks twenty-five minutes slow. Thank you. In about thirty years.
