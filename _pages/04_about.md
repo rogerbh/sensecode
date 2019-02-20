@@ -4,10 +4,14 @@ title: About
 permalink: /about/
 ---
 
-![AAAAAAAAAAAAAAAAAAAhhhhhhhhhhhhhh]({{ "/images/cat.jpg" | absolute_url }})
+![Me, at age 2]({{ "/images/cat.jpg" | absolute_url }})
 
-Excuse me. Erased from existence. Uh, well, okay Biff, uh, I'll finish that on up tonight and I'll bring it over first thing tomorrow morning. Good, there's somebody I'd like you to meet. Lorraine. Of course I do. Just a second, let's see if I could find it.
+## Hi there!
 
-Nah, I just don't think I'm cut out for music. Ah. Thank god I still got my hair. What on Earth is that thing I'm wearing? Y'know this time it wasn't my fault. The Doc set all of his clocks twenty-five minutes slow. Thank you. In about thirty years.
+#### My name is Roger. I'm a web designer and a frontEnd web developer enthusiast from Brazil.
 
-Yeah, I think it's a major embarrassment having an uncle in prison. Yes, yes, I'm George, George McFly, and I'm your density. I mean, I'm your destiny. Well uh, good, fine. Hey man, look at Marvin's hand. He can't play with his hands like that, and we can't play without him. Don't say a word.
+I work mainly with html, css and js.
+
+i'm Currently studying and doing some works with the hotest JS frameworks avaialble, like React and VueJs. Besides other cool stuff like Ionic and React Native.
+
+What moves me at this area is the possibility of creating beautiful and inspiring things with some lines of code.
