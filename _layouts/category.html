@@ -12,6 +12,20 @@ layout: default
     {{ content }}
   </div>
 
+  {% if site.categories[page.category] == null %}
+  <div class="text-center">
+    <h4 class="no-posts-msg">
+      <span style="border-radius:8px;display: inline-block; transform: rotate(-5deg) translateX(-35px);">
+          <i class="fas fa-meh"></i> Oops! No <span style="background-color: #ffed99; border-radius: 8px; color: #555;">{{page.title}}</span> content here yet...
+      </span>
+    </h4>
+    <h3 class="no-posts-msg" style="margin-bottom: 15px; margin-top: 0;">
+      <span style="border-bottom-right-radius:8px;border-bottom-left-radius:8px;display: inline-block; transform: rotate(-5deg) translateX(75px);">
+          But get back soon! <i class="fas fa-grin-wink"></i>
+      </span>
+    </h3>
+  </div>
+  {% else %}
   <ul class="d-flex flex-wrap post-list" style="flex-direction: row; flex:initial;">
     {% for post in site.categories[page.category] %}
     <li>
@@ -28,5 +42,6 @@ layout: default
     </li>
     {% endfor %}
   </ul>
+  {% endif %}
 
 </div>
