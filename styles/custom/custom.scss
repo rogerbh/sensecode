@@ -109,12 +109,16 @@ h2.page-title{
   li{
     display: flex; flex: 1; border-bottom: solid 1px #ddd; overflow: hidden; position: relative;
     &:nth-child(1) a:hover{
-      background-color: #3158ab !important;
+      background-color: #e02e6d !important;
     }
     &:nth-child(2) a:hover{
-      background-color: #ff8e34 !important;
+      // background-color: #3158ab !important;
+      background-color: #60caff !important;
     }
     &:nth-child(3) a:hover{
+      background-color: #ff8e34 !important;
+    }
+    &:nth-child(4) a:hover{
       background-color: #ffba34 !important;
     }
   }
@@ -163,9 +167,10 @@ h2.page-title{
     left .35s cubic-bezier(0.770, 0.000, 0.175, 1.000);
   }  
 
-  li:nth-of-type(1) a::before{content: '\f13b';}
-  li:nth-of-type(2) a::before{font-family: "FontMfizz"; content: '\f116';}
-  li:nth-of-type(3) a::before{font-family: "FontMfizz"; content: '\f142';}
+  li:nth-of-type(1) a::before{font-family: "Font Awesome 5 Free"; font-weight: 900; content: '\f568';}
+  li:nth-of-type(2) a::before{content: '\f13b';}
+  li:nth-of-type(3) a::before{font-family: "FontMfizz"; content: '\f116';}
+  li:nth-of-type(4) a::before{font-family: "FontMfizz"; content: '\f142';}
 
   li a:hover::before, li a:active::before{
     opacity: 1;
@@ -388,6 +393,20 @@ h2.page-title{
         font-size: 35px;
       }
     }
+  }
+
+}
+
+.no-posts-msg{
+  margin:15px 15px -1px;
+  span{
+    background: #333;
+  color: #fff;
+  padding:5px;
+  }
+
+  i{
+    color: #ffde0c;
   }
 
 }
