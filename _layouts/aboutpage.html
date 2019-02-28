@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="post-page-holder">
+    <div class="page-content">
+        <h2 class="page-title">{{ page.title }}</h2>
+        {% include share.html %}
+
+        <!-- Generator: Gravit.io -->
+        <svg id="svgToShowMe" viewBox="0 0 300 200" width="300" height="200">
+            <defs>
+                <mask id="mask-me">
+                    <rect x="0" y="0" width="257" height="32" transform="matrix(1,0,0,1,0,0)" fill="rgb(235,235,235)" />
+                    <rect x="43" y="33" width="257" height="44" transform="matrix(1,0,0,1,0,0)"
+                        fill="rgb(235,235,235)" />
+                    <rect x="0" y="78" width="257" height="44" transform="matrix(1,0,0,1,0,0)"
+                        fill="rgb(235,235,235)" />
+                    <rect x="43" y="123" width="257" height="44" transform="matrix(1,0,0,1,0,0)"
+                        fill="rgb(235,235,235)" />
+                    <rect x="0" y="168" width="257" height="32" transform="matrix(1,0,0,1,0,0)"
+                        fill="rgb(235,235,235)" />
+                </mask>
+            </defs>
+            <image mask="url(#mask-me)" width="300" height="200" xlink:href="../img/me.jpg"/>
+        </svg>
+
+        {{ content }}
+    </div>
+</div>

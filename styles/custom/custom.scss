@@ -426,6 +426,26 @@ h2.page-title{
   padding: 15px 5%;
 }
 
+#svgToShowMe{
+  rect{
+    width:0;
+    animation-name: showMe;
+        animation-duration: .55s; /* or: Xms */
+        animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+        animation-fill-mode: forwards; /* or: backwards, both, none */
+        animation-delay: .5s;
+  }
+}
+
+@keyframes showMe {
+  0%   {
+    width:0;
+   }
+  100%   {
+    width:257px;
+   }
+}
+
 @media (max-width: 576px){
   .post-list{flex-direction: column !important; flex-wrap: nowrap !important;}
 }

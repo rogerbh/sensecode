@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: aboutpage
 title: About
 permalink: /about/
 ---
 
-![Me, at age 2]({{ "/images/cat.jpg" | absolute_url }})
+<!-- ![Me, at age 2]({{ "/images/cat.jpg" | absolute_url }}) -->
 
 ## Hi there!
 
