@@ -4,11 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<!-- ![Me, at age 2]({{ "/images/cat.jpg" | absolute_url }}) -->
-
-## Hi there!
-
-#### My name is Roger. I'm a web designer and a frontEnd web developer enthusiast from Brazil.
+#### Yep! css used to be much better back then.
 
 I work mainly with html, css and js.
 
