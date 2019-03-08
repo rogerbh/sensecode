@@ -2,7 +2,11 @@
 layout: default
 ---
 
-<div class="home">
+{% if site.categories[page.category] == null %}
+  {% assign no_posts_class = 'no-posts-here' %}
+{% endif %}
+
+<div class="home {{ no_posts_class }}">
 
   <span class="slogan-home">
     <span>web design</span> & frontEnd dev experiments
@@ -15,13 +19,13 @@ layout: default
   {% if site.categories[page.category] == null %}
   <div class="text-center no-posts-msg-holder">
     <h4 class="no-posts-msg">
-      <span style="border-radius:8px;display: inline-block; transform: rotate(-5deg) translateX(-35px);">
-          <i class="fas fa-meh"></i> Oops! No <span style="background-color: #ffed99; border-radius: 8px; color: #555;">{{page.title}}</span> content here yet...
+      <span>
+        <i class="fas fa-meh"></i> Oops! No <span>{{page.title}}</span> content here yet...
       </span>
     </h4>
-    <h3 class="no-posts-msg" style="margin-bottom: 15px; margin-top: 0;">
-      <span style="border-bottom-right-radius:8px;border-bottom-left-radius:8px;display: inline-block; transform: rotate(-5deg) translateX(75px);">
-          But get back soon! <i class="fas fa-grin-wink"></i>
+    <h3 class="no-posts-msg">
+      <span>
+        But get back soon! <i class="fas fa-grin-wink"></i>
       </span>
     </h3>
   </div>
