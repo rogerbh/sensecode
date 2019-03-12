@@ -434,6 +434,14 @@ h2.page-title{
 
       .no-posts-msg{
         margin:15px 15px -1px;
+
+        .oops{
+          font-weight: unset;
+          background: none;
+          font-size: unset;
+          color: #fff;
+        }
+
         span{
           background: #333;
         color: #fff;
@@ -1003,6 +1011,60 @@ h2.page-title{
   .footer-holder h6{
     font-size: .85rem;
   }
+
+  .no-posts-msg-holder{
+
+    .no-posts-msg{
+      margin:0;
+      font-size: 20px;
+
+      .oops{
+        font-weight: bold;
+        background: none;
+        font-size: 24px;
+        color: inherit;
+      }
+
+      span{
+        background: none;
+      color: #333;
+      padding:0;
+      }
+    
+      i{
+        color: #ffde0c;
+      }
+    
+    }
+
+    h4.no-posts-msg > span{
+      border-radius:0;
+      transform: none;
+      opacity: 1;
+      animation:none;
+
+      span{
+        border-radius: 0; color: #555;
+      }
+    }
+
+    h3.no-posts-msg{
+      margin-bottom: 0;
+      margin-top: 15px;
+      font-weight: bold;
+      span{
+        border-bottom-right-radius:0;
+        border-bottom-left-radius:0;
+        display: inline-block;
+        transform: none;
+        opacity: 1;
+
+        animation-name: none;
+
+      }
+    }
+
+}
 
 }
 
