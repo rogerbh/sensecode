@@ -234,11 +234,11 @@ h2.page-title{
   span{
       color: tomato;
       font-family: inherit;
-      &::before{
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        content: '\f120';
-      }
+      // &::before{
+      //   font-family: 'Font Awesome 5 Free';
+      //   font-weight: 900;
+      //   content: '\f120';
+      // }
   }
 }
 
@@ -697,6 +697,10 @@ h2.page-title{
   
     }
   }
+}
+
+@media (max-width: 576px) and (orientation: landscape){
+  .site-name{display: none !important;}
 }
 
 @media (max-width: 850px){

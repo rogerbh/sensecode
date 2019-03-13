@@ -2,11 +2,13 @@
 // in case the document is already rendered
 if (document.readyState != 'loading') {
     randomPostWidth();
+    //clickCountStart;
 }
 // modern browsers
 else if (document.addEventListener) {
     document.addEventListener('DOMContentLoaded', function () {
         randomPostWidth();
+        //clickCountStart;
     });
 }
 // FIM equivalente ao document.ready da biblioteca jQuery
@@ -71,3 +73,16 @@ $('body').on('click', '.btn-toggle-menu', function () {
     $('#menuMobile').toggle();
     $('.overlay-menu-mobile').toggle();
 });
+
+// var clicks = 0;
+// function clickCount() {
+//     clicks += 1;
+//     console.log('--------------------------------------> ' + clicks);
+// }
+
+// function clickCountStart() {
+//     var el = document.getElementById("svgToShowMe");
+//     el.addEventListener("click", clickCount, false);
+// }
+
+// document.addEventListener("DOMContentLoaded", clickCountStart, false);
