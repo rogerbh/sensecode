@@ -220,18 +220,71 @@ h2.page-title{
   span{font-family: 'Nunito', sans-serif; }
 }
 
+.hold-slogan{
+  display: flex;
+  justify-content: flex-end;
+}
+
 .slogan-home{
-  font-family: 'Nunito', sans-serif; 
-  font-size: 30px;
-  display: block;
-  color: #555;
-  padding: 12px 0 12px 15px;
-  margin: 0 15px 5px 15px;
-  line-height: initial;
-  text-align: right;
-  border-bottom: solid 1px #ccc;
-  box-shadow: 0px 5px 2px -4px rgba(0,0,0,.05);
-  span{
+  // padding: 12px 0 12px 15px;
+  // margin: 0 15px 5px 15px;
+
+    // width: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    color: #555;
+    padding: 12px 15px 0 15px;
+    margin: 5px 15px 35px 0;
+    line-height: initial;
+    text-align: right;
+    display: flex;
+    flex: 1;
+    align-items: baseline;
+    justify-self: flex-end;
+    justify-content: space-between;
+
+  .slogan-bar{
+
+    flex: 0;
+    opacity: 0;
+    height: 15px;
+    background-color: tomato;
+
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+
+    animation-name: sloganBar;
+      animation-duration: .3s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: .5s;
+
+    &::after{
+      content: '';
+      transform: skewX(20deg);
+      width: 10px;
+      background-color: tomato;
+      margin-right: -5px;
+  
+    }
+
+  }
+
+  @keyframes sloganBar {
+    0%   {
+      opacity: 0;
+      flex: 0;
+     }
+    100%   {
+      opacity: 1;
+      flex: 1;
+     }
+  }
+
+  span{font-family: 'Nunito', sans-serif;}
+
+  > span > span{
       color: tomato;
       font-family: inherit;
       // &::before{
