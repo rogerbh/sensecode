@@ -604,12 +604,12 @@ h2.page-title{
 
   .joke-about-css{
     position: absolute;
-    bottom: 50px;
-    margin-left: 300px;
-    transform: rotate(-8deg);
+    margin-left: 110px;
+    transform: rotate(-5deg);
     font-family: 'Karma', serif;
     font-size: 18px;
-    span{font-size: 24px;}
+    bottom: 60px;
+    // display: none;
   }
 
   #svgToShowMe{
@@ -687,6 +687,100 @@ h2.page-title{
     }
 
   }
+
+  #meChild,
+  #meNow{
+    transform-origin: center;
+  }
+
+  .me-child-out{
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+
+    animation-name: meChildOut;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(.13,.74,.42,1.18);
+    animation-fill-mode: forwards;
+    animation-delay: .15s;
+  }
+
+  .me-now-in{
+    transform: scale(.8) rotate(-45deg);
+    opacity: 0;
+
+    animation-name: meNowIn;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(.13,.74,.42,1.18);
+    animation-fill-mode: forwards;
+    animation-delay: .15s;
+  }
+
+  .me-child-in{
+    transform: scale(.8) rotate(45deg);
+    opacity: 0;
+
+    animation-name: meChildIn;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(.13,.74,.42,1.18);
+    animation-fill-mode: forwards;
+    animation-delay: .15s;
+  }
+
+  .me-now-out{
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+
+    animation-name: meNowOut;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(.13,.74,.42,1.18);
+    animation-fill-mode: forwards;
+    animation-delay: .15s;
+  }
+
+}
+
+@keyframes meChildOut {
+  from{
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  to{
+    transform: scale(.8) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes meChildIn {
+  from{
+    transform: scale(.8) rotate(45deg);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes meNowIn {
+  from{
+    transform: scale(.8) rotate(-45deg);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes meNowOut {
+  from{
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  to{
+    transform: scale(.8) rotate(-45deg);
+    opacity: 0;
+  }
 }
 
 @keyframes showMe {
@@ -762,6 +856,14 @@ h2.page-title{
       }
   
     }
+
+    .joke-about-css{
+      margin-left: 0;
+      font-size: 18px;
+      // display: none;
+      span{font-size: 18px;}
+    }
+
   }
 }
 
@@ -787,6 +889,12 @@ h2.page-title{
       }
   
     }
+
+    .joke-about-css{
+      margin-left: 90px;
+      bottom: 10px;
+    }
+
   }
 }
 

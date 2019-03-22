@@ -2,12 +2,14 @@
 // in case the document is already rendered
 if (document.readyState != 'loading') {
     randomPostWidth();
+    clickMeEvent();
     //clickCountStart;
 }
 // modern browsers
 else if (document.addEventListener) {
     document.addEventListener('DOMContentLoaded', function () {
         randomPostWidth();
+        clickMeEvent();
         //clickCountStart;
     });
 }
@@ -74,15 +76,50 @@ $('body').on('click', '.btn-toggle-menu', function () {
     $('.overlay-menu-mobile').toggle();
 });
 
-// var clicks = 0;
-// function clickCount() {
-//     clicks += 1;
-//     console.log('--------------------------------------> ' + clicks);
-// }
+//rotina para exibir minha foto atual como easter egg
+function ClickMeStuff() {
+    return this.clicks = 0;
+}
 
-// function clickCountStart() {
-//     var el = document.getElementById("svgToShowMe");
-//     el.addEventListener("click", clickCount, false);
-// }
+function clickMeEvent() {
+    var el = document.getElementById("svgToShowMe"),
+        myselfChild = document.getElementById("meChild"),
+        myselfNow = document.getElementById("meNow"),
+        clickHandle = new ClickMeStuff();
 
-// document.addEventListener("DOMContentLoaded", clickCountStart, false);
+    el.addEventListener("click", registerClicks, false);
+
+    function registerClicks() {
+        clickHandle.clicks += 1;
+        if (clickHandle.clicks === 15) {
+            myselfChild.classList.add('me-child-out');
+            setTimeout(function () {
+                myselfChild.classList.add('d-none');
+            }, 550);
+
+            myselfNow.classList.add('me-now-in');
+            myselfNow.classList.remove('d-none');
+
+            setTimeout(function () {
+                myselfChild.classList.add('me-child-in');
+                myselfChild.classList.remove('me-child-out', 'd-none');
+
+                myselfNow.classList.add('me-now-out');
+                myselfNow.classList.remove('me-now-in');
+                setTimeout(function () {
+                    myselfNow.classList.add('d-none');
+                    myselfNow.classList.remove('me-now-out');
+                    myselfChild.classList.remove('me-child-in');
+                }, 700);
+
+                clickHandle.clicks = 0;
+
+            }, 10000);
+
+            console.log('--------------------------------------> ' + clickHandle.clicks);
+        }
+    }
+}
+//FIM rotina para exibir minha foto atual como easter egg
+
+//document.addEventListener("DOMContentLoaded", clickMeEvent, false);

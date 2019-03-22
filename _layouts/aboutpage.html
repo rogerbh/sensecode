@@ -37,7 +37,8 @@ layout: default
                                 fill="rgb(235,235,235)" />
                         </mask>
                     </defs>
-                    <image mask="url(#mask-me)" width="350" height="365" xlink:href="../img/me.jpg" />
+                    <image id="meChild" mask="url(#mask-me)" width="350" height="365" xlink:href="../img/me.jpg" />
+                    <image id="meNow" class="d-none" mask="url(#mask-me)" width="350" height="365" xlink:href="../img/me-now.jpg" />
                     <path
                         d=" M 9.25 182.5 C 9.25 91.02 83.52 16.75 175 16.75 C 266.48 16.75 340.75 91.02 340.75 182.5 C 340.75 273.98 266.48 348.25 175 348.25 C 83.52 348.25 9.25 273.98 9.25 182.5 Z "
                         fill="none" vector-effect="non-scaling-stroke" stroke-width="8" stroke="rgb(255,186,52)"
@@ -53,14 +54,11 @@ layout: default
                 <h4>
                     My name is Roger. I'm a web designer and a frontEnd web developer from Brazil.
                 </h4>
-            </div>
 
-            <!--
-            <img style="flex:0; position: absolute; bottom: 30px; margin-left: 250px;" src="../img/arrow-to-me.png"/>
-            <h6 class="joke-about-css">
-                <span>Yep!</span><br />Css used to be much better back then.
-            </h6>
-            -->
+                <!-- <h6 class="joke-about-css">
+                    <span>Yep!</span> Css used to be much better back then.
+                </h6> -->
+            </div>
 
         </div>
 
