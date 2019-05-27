@@ -1,4 +1,17 @@
-<div class="footer-holder py-3 mx-4 my-4">
+<div id="vueFooter" class="footer-holder py-3 mx-4 my-4">
+  <h6 class="text-center m-0 p-0">
+    {% include footer-icons.html %}
+    <div id="vueFooterData" v-html="
+    linkToVsCode +
+    linkToJekyll +
+    linkToBootstrap + 
+    linkToGitHub
+    " class="d-inline"></div>
+    
+  </h6>
+</div>
+
+<!-- <div class="footer-holder py-3 mx-4 my-4">
   <h6 class="text-center m-0 p-0">
     {% include footer-icons.html %}
     <a href='https://code.visualstudio.com/' target='_blank'>VSCode</a>,
@@ -6,4 +19,4 @@
     <a href='http://getbootstrap.com/' target='_blank'>Bootstrap 4</a> and more cool stuff!<br>
     Kindly hosted by <a href='https://pages.github.com/' target="_blank">GitHub Pages</a>
   </h6>
-</div>
+</div> -->
