@@ -1,3 +1,4 @@
+// Mostra os links do rodapé
 var vueFooterData = new Vue({
 	el: "#vueFooterData",
     data: {
@@ -7,3 +8,4 @@ var vueFooterData = new Vue({
         linkToGitHub: "<br>Kindly hosted by <a href='https://pages.github.com/' target='_blank'>GitHub Pages</a>"
     }
 })
+// FIM --- Mostra os links do rodapé

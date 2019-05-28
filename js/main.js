@@ -2,15 +2,15 @@
 // in case the document is already rendered
 if (document.readyState != 'loading') {
     randomPostWidth();
-    clickMeEvent();
-    //clickCountStart;
+    if (document.getElementById('svgToShowMe') !== null)
+        clickMeEvent();
 }
 // modern browsers
 else if (document.addEventListener) {
     document.addEventListener('DOMContentLoaded', function () {
         randomPostWidth();
-        clickMeEvent();
-        //clickCountStart;
+        if (document.getElementById('svgToShowMe') !== null)
+            clickMeEvent();
     });
 }
 // FIM equivalente ao document.ready da biblioteca jQuery
@@ -91,7 +91,7 @@ function clickMeEvent() {
 
     function registerClicks() {
         clickHandle.clicks += 1;
-        if (clickHandle.clicks === 15) {
+        if (clickHandle.clicks === 7) {
             myselfChild.classList.add('me-child-out');
             setTimeout(function () {
                 myselfChild.classList.add('d-none');
@@ -116,7 +116,7 @@ function clickMeEvent() {
 
             }, 10000);
 
-            console.log('--------------------------------------> ' + clickHandle.clicks);
+            //console.log('--------------------------------------> ' + clickHandle.clicks);
         }
     }
 }
