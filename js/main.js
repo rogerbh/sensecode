@@ -76,6 +76,13 @@ $('body').on('click', '.btn-toggle-menu', function () {
     $('.overlay-menu-mobile').toggle();
 });
 
+$(window).on('resize', function () {
+    const el = document.getElementById("menuMobile");
+    // Caso o menu esteja visível durante um window resize
+    if (el.offsetParent !== null)
+        el.style.display = 'none';
+});
+
 //rotina para exibir minha foto atual como easter egg
 function ClickMeStuff() {
     return this.clicks = 0;
