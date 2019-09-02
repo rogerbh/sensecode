@@ -15,6 +15,8 @@ font-family: 'Swanky and Moo Moo', cursive;
 font-family: 'Karma', serif;
 */
 
+.site-holder{max-width: 1500px;}
+
 .flex-combo{
   flex: 1;  
     display: flex;
@@ -230,7 +232,7 @@ h2.page-title{
   // padding: 12px 0 12px 15px;
   // margin: 0 15px 5px 15px;
 
-    // width: 100%;
+    width: 100%;
     font-family: 'Nunito', sans-serif;
     font-size: 30px;
     color: #555;
@@ -238,51 +240,6 @@ h2.page-title{
     margin: 5px 15px 35px 0;
     line-height: initial;
     text-align: right;
-    display: flex;
-    flex: 1;
-    align-items: baseline;
-    justify-self: flex-end;
-    justify-content: space-between;
-
-  .slogan-bar{
-
-    flex: 0;
-    opacity: 0;
-    // height: 15px;
-    height: 1px;
-    background-color: tomato;
-
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5px;
-
-    animation-name: sloganBar;
-      animation-duration: .3s;
-      animation-timing-function: ease-out;
-      animation-fill-mode: forwards;
-      animation-delay: .5s;
-
-    &::after{
-      content: '';
-      transform: skewX(20deg);
-      width: 10px;
-      background-color: tomato;
-      margin-right: -5px;
-  
-    }
-
-  }
-
-  @keyframes sloganBar {
-    0%   {
-      opacity: 0;
-      flex: 0;
-     }
-    100%   {
-      opacity: 1;
-      flex: 1;
-     }
-  }
 
   span{font-family: 'Nunito', sans-serif;}
 
@@ -398,6 +355,8 @@ h2.page-title{
   padding-right: 0;
   margin: 0;
 
+  justify-content: flex-start;
+
   
 
   li{
@@ -415,21 +374,13 @@ h2.page-title{
     transition: all .1s ease-out;
     overflow: hidden;
 
-    // &::after{
-    //   content: '';
-    //   height: 35px;
-    //   width: 35px;
-    //   border: solid 5px inherit;
-    //   border-radius: 100%;
-    //   background:none;
-    //   position: absolute;
-    // }
-
     &:hover{
       border-top: solid 3px;
       background: #fff;
       box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.18);
       transform: scale(1.01,1.01);
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
     }
     a{
       /*transition: border-bottom-color .15s ease-out;*/
@@ -973,15 +924,21 @@ h2.page-title{
       flex-direction: column;
       position: absolute;
       left: calc(25vw + 80px);
-      top: 0;
-      opacity: .97;
+      top: 100px;
+      opacity: 0;
       background-color: #fefefe;
       border-bottom-right-radius: 4px;
       border-bottom-left-radius: 4px;
-      height: 55vw;
-      width: 45vw;
+      height: 55vh;
+      width: 40vw;
       box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
       padding: 10px;
+
+      animation-name: showMenuMobile;
+      animation-duration: .15s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+
       .menu-list-mobile{
         list-style-type: none;
         list-style-position:inside;
@@ -991,7 +948,7 @@ h2.page-title{
         flex-direction: column;
         height: 100%;
         li{
-          border-bottom: solid 1px #ddd;
+          // border-bottom: solid 1px #ddd;
           padding: 5px 0;
           &:first-child{
             padding-top: 0;
@@ -1015,6 +972,7 @@ h2.page-title{
             display: flex;
             flex: 1;
             padding: 0 10px;
+            border-radius: 4px;
             &:hover{
               color: #fff;
               background-color: #209c97;
@@ -1187,11 +1145,22 @@ h2.page-title{
       height: 50%;
       z-index: 5;
       animation-name: enterOverlay;
-      animation-duration: .1s; /* or: Xms */
+      animation-duration: .15s; /* or: Xms */
       animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
       animation-fill-mode: forwards; /* or: backwards, both, none */
     }
 
+  }
+
+  @keyframes showMenuMobile {
+    0%   {
+      top: 100px;
+      opacity: 0;
+     }
+    100%   {
+      top: 0px;
+      opacity: .97;
+     }
   }
 
   @keyframes enterOverlay {

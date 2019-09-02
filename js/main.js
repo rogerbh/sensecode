@@ -79,8 +79,10 @@ $('body').on('click', '.btn-toggle-menu', function () {
 $(window).on('resize', function () {
     const el = document.getElementById("menuMobile");
     // Caso o menu esteja visível durante um window resize
-    if (el.offsetParent !== null)
+    if (el.offsetParent !== null){
         el.style.display = 'none';
+        $('.overlay-menu-mobile').hide();
+    } 
 });
 
 //rotina para exibir minha foto atual como easter egg
@@ -98,7 +100,7 @@ function clickMeEvent() {
 
     function registerClicks() {
         clickHandle.clicks += 1;
-        if (clickHandle.clicks === 7) {
+        if (clickHandle.clicks === 2) {
             myselfChild.classList.add('me-child-out');
             setTimeout(function () {
                 myselfChild.classList.add('d-none');
