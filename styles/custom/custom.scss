@@ -129,17 +129,23 @@ h2.page-title{
   li{
     display: flex; flex: 1; border-bottom: solid 1px #ddd; overflow: hidden; position: relative;
     &:nth-child(1) a:hover{
-      background-color: #e02e6d !important;
+      background: #e02e6d !important;
     }
     &:nth-child(2) a:hover{
       // background-color: #3158ab !important;
-      background-color: #60caff !important;
+      background: #ff8e34 !important;
     }
     &:nth-child(3) a:hover{
-      background-color: #ff8e34 !important;
+      background: #1370b0 !important;
     }
     &:nth-child(4) a:hover{
-      background-color: #ffba34 !important;
+      background: #ffba34 !important;
+    }
+    &:nth-child(5) a:hover{
+      background: #61DAFB !important;
+    }
+    &:nth-child(6) a:hover{
+      background: #41b883 !important;
     }
   }
 
@@ -151,7 +157,8 @@ h2.page-title{
     text-align: right;
     transition-property: background-color, color, padding-right;
     transition: .2s ease; 
-    background-color: #eee; 
+    background-color: #eee;
+    // background: linear-gradient(to right, rgba(238,238,238,1) 0%, rgba(246,246,246,0.27) 73%, rgba(255,255,255,0) 100%);
     color: #444;
     display: flex;
     flex: 1;
@@ -192,6 +199,8 @@ h2.page-title{
   li:nth-of-type(2) a::before{content: '\f13b';}
   li:nth-of-type(3) a::before{font-family: "FontMfizz"; content: '\f116';}
   li:nth-of-type(4) a::before{font-family: "FontMfizz"; content: '\f142';}
+  li:nth-of-type(5) a::before{content: '\f41b';}
+  li:nth-of-type(6) a::before{content: '\f41f';}
 
   li a:hover::before, li a:active::before{
     opacity: 1;
