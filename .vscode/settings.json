@@ -6,5 +6,6 @@
        "**/node_modules/**",
        ".vscode/**"
     ],
-    "liveSassCompile.settings.generateMap" : true
+    "liveSassCompile.settings.generateMap": true,
+    "git.ignoreLimitWarning": true
 }

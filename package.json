@@ -4,6 +4,8 @@
   "description": "",
   "main": "",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
     "gulp": "^3.9.1",
     "gulp-less": "^3.5.0",
     "gulp-sass": "^3.2.1"
