@@ -32,6 +32,13 @@
   <!-- VueJs production version, optimized for size and speed -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
+  <!-- ReactJs -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <!--
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+  -->
+
   <link rel="stylesheet" href="/styles/custom/css/custom.css">
   <link rel="stylesheet" href="/styles/prism-codesnipet-highlight/prism.css">
   <link
@@ -137,15 +144,19 @@
               </li>
                 
               <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
-                <a class="navbar-item" href="/js/">Javascript World</a>
+                <a class="navbar-item" href="/js/">Javascript</a>
+              </li>
+                
+              <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
+                <a class="navbar-item" href="/react/">ReactJs</a>
+              </li>
+                
+              <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
+                <a class="navbar-item" href="/vue/">VueJs</a>
               </li>
                 
               <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
                 <a class="navbar-item" href="/about/">About</a>
-              </li>
-                
-              <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
-                <a class="navbar-item" href="/contact/">Contact</a>
               </li>
                      
             </ul>
@@ -173,15 +184,19 @@
           </li>
             
           <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
-            <a class="navbar-item" href="/js/">Javascript World</a>
+            <a class="navbar-item" href="/js/">Javascript</a>
+          </li>
+            
+          <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
+            <a class="navbar-item" href="/react/">ReactJs</a>
+          </li>
+            
+          <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
+            <a class="navbar-item" href="/vue/">VueJs</a>
           </li>
             
           <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
             <a class="navbar-item" href="/about/">About</a>
-          </li>
-            
-          <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
-            <a class="navbar-item" href="/contact/">Contact</a>
           </li>
                  
         </ul>
@@ -189,21 +204,39 @@
 
     </div>
     <!--Coluna de conteúdo-->
-    <div class="content-col h-100 bg-light">
+    <div class="bg-light content-col h-100">
       <div class="overlay-menu-mobile" style="display:none;"></div>
-      <div class="post-page-holder">
-    <div class="page-content">
-        <h2 class="page-title">Contact</h2>
-        <div class="share-page">
-    <span>Share this on &rarr;</span>
-    <a class="share-twitter" href="https://twitter.com/intent/tweet?text=Contact&url=http://www.sensecode.io/contact/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"></a>
-    <a class="share-facebook" href="https://facebook.com/sharer.php?u=http://www.sensecode.io/contact/" rel="nofollow" target="_blank" title="Share on Facebook"></a>
-    <a class="share-googleplus" href="https://plus.google.com/share?url=http://www.sensecode.io/contact/" rel="nofollow" target="_blank" title="Share on Google+"></a>
-    <a class="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.sensecode.io/contact/" rel="nofollow" target="_blank" title="Share on Linkedin"></a>
-</div>
-        <p>Contact content goes here.</p>
+      
 
-    </div>
+<div class="home no-posts-here">
+
+  <!-- <span class="slogan-home">
+    <span>web design</span> & frontEnd dev experiments
+  </span> -->
+
+  <div class="hold-slogan">
+    <span class="slogan-home">
+      <span><span>web design</span> & frontEnd dev experiments</span>
+    </span>
+  </div>
+
+  
+
+  
+  <div class="text-center no-posts-msg-holder">
+    <h4 class="no-posts-msg">
+      <span>
+        <i class="fas fa-meh d-none d-md-inline"></i> <span class="oops">Oops!</span><br class="d-sm-block d-md-none" /> No <span>ReactJs</span> content here yet...
+      </span>
+    </h4>
+    <h3 class="no-posts-msg">
+      <span>
+        But get back soon! <i class="fas fa-grin-wink d-none d-md-inline"></i>
+      </span>
+    </h3>
+  </div>
+  
+
 </div> <div id="vueFooter" class="footer-holder py-3 mx-4 my-4">
   <h6 class="text-center m-0 p-0">
     Made with
@@ -220,6 +253,10 @@
 
   </h6>
 </div>
+
+<!-- <div id="reactFooter">
+
+</div> -->
 
 <!-- <div class="footer-holder py-3 mx-4 my-4">
   <h6 class="text-center m-0 p-0">

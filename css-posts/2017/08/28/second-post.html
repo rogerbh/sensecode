@@ -32,6 +32,13 @@
   <!-- VueJs production version, optimized for size and speed -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
+  <!-- ReactJs -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <!--
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+  -->
+
   <link rel="stylesheet" href="/styles/custom/css/custom.css">
   <link rel="stylesheet" href="/styles/prism-codesnipet-highlight/prism.css">
   <link
@@ -137,15 +144,19 @@
               </li>
                 
               <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
-                <a class="navbar-item" href="/js/">Javascript World</a>
+                <a class="navbar-item" href="/js/">Javascript</a>
+              </li>
+                
+              <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
+                <a class="navbar-item" href="/react/">ReactJs</a>
+              </li>
+                
+              <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
+                <a class="navbar-item" href="/vue/">VueJs</a>
               </li>
                 
               <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
                 <a class="navbar-item" href="/about/">About</a>
-              </li>
-                
-              <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
-                <a class="navbar-item" href="/contact/">Contact</a>
               </li>
                      
             </ul>
@@ -173,15 +184,19 @@
           </li>
             
           <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
-            <a class="navbar-item" href="/js/">Javascript World</a>
+            <a class="navbar-item" href="/js/">Javascript</a>
+          </li>
+            
+          <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
+            <a class="navbar-item" href="/react/">ReactJs</a>
+          </li>
+            
+          <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
+            <a class="navbar-item" href="/vue/">VueJs</a>
           </li>
             
           <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
             <a class="navbar-item" href="/about/">About</a>
-          </li>
-            
-          <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
-            <a class="navbar-item" href="/contact/">Contact</a>
           </li>
                  
         </ul>
@@ -189,7 +204,7 @@
 
     </div>
     <!--Coluna de conteúdo-->
-    <div class="content-col h-100 bg-light">
+    <div class="bg-light content-col h-100">
       <div class="overlay-menu-mobile" style="display:none;"></div>
       <div class="post-page-holder">
     
@@ -249,6 +264,10 @@
 
   </h6>
 </div>
+
+<!-- <div id="reactFooter">
+
+</div> -->
 
 <!-- <div class="footer-holder py-3 mx-4 my-4">
   <h6 class="text-center m-0 p-0">
