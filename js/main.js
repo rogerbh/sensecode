@@ -80,6 +80,9 @@ $(window).on('resize', function () {
     const el = document.getElementById("menuMobile");
     // Caso o menu esteja visível durante um window resize
     if (el.offsetParent !== null){
+        $('.btn-toggle-menu').toggleClass(function () {
+            return $(this).is('.menu-open, .menu-close') ? 'menu-open menu-close' : 'menu-open';
+        });
         el.style.display = 'none';
         $('.overlay-menu-mobile').hide();
     } 

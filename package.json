@@ -4,13 +4,16 @@
   "description": "",
   "main": "",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2",
     "gulp": "^3.9.1",
     "gulp-less": "^3.5.0",
     "gulp-sass": "^3.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
