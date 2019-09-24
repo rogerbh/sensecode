@@ -30,14 +30,12 @@
   <script src="/js/vendor/bootstrap.min.js"></script>
 
   <!-- VueJs production version, optimized for size and speed -->
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
 
   <!-- ReactJs -->
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  <!--
   <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-  -->
 
   <link rel="stylesheet" href="/styles/custom/css/custom.css">
   <link rel="stylesheet" href="/styles/prism-codesnipet-highlight/prism.css">
@@ -148,7 +146,7 @@
               </li>
                 
               <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
-                <a class="navbar-item" href="/react/">ReactJs</a>
+                <a class="navbar-item" href="/react/">React</a>
               </li>
                 
               <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
@@ -188,7 +186,7 @@
           </li>
             
           <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
-            <a class="navbar-item" href="/react/">ReactJs</a>
+            <a class="navbar-item" href="/react/">React</a>
           </li>
             
           <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
@@ -297,7 +295,7 @@
     
   </ul>
 
-</div> <div id="vueFooter" class="footer-holder py-3 mx-4 my-4">
+</div> <!-- <div id="vueFooter" class="footer-holder py-3 mx-4 my-4">
   <h6 class="text-center m-0 p-0">
     Made with
 <i class="far fa-heart" style="padding:0 2px; color:#db0067 !important; font-size:14px;" aria-hidden="true"></i>,
@@ -312,12 +310,19 @@
     " class="d-inline"></span>
 
   </h6>
-</div>
-
-<!-- <div id="reactFooter">
-
 </div> -->
 
+<div id="reactFooter" class="footer-holder py-3 mx-4 my-4">
+  <h6 class="text-center m-0 p-0">
+    Made with
+<i class="far fa-heart" style="padding:0 2px; color:#db0067 !important; font-size:14px;" aria-hidden="true"></i>,
+<i class="fa fa-coffee" style="padding:0 2px; color:#db0067 !important; font-size:14px;" aria-hidden="true"></i>,
+<i class="fa fa-headphones" style="padding:0 2px; color:#db0067 !important; font-size:14px;" aria-hidden="true"></i>,
+    <span id="reactFooterData" class="d-inline"></span>
+  </h6>
+</div>
+
+<!-- Original em html -->
 <!-- <div class="footer-holder py-3 mx-4 my-4">
   <h6 class="text-center m-0 p-0">
     Made with
@@ -330,11 +335,13 @@
     Kindly hosted by <a href='https://pages.github.com/' target="_blank">GitHub Pages</a>
   </h6>
 </div> -->
+<!-- FIM Original em html -->
     </div>
 
   </div>
   <script src="/js/main.js"></script>
-  <script src="/js/vue-app-functions.js"></script>
+  <!-- <script src="/js/vue-app-functions.js"></script> -->
+  <script src="/js/react/js/react-footer.js"></script>
   <script src="/js/vendor/prism.js"></script>
 </body>
 
