@@ -13,6 +13,7 @@ I'm at the beginning of reading/studying about development with __Firebase__ and
 
 What moves me at this area is the possibility of __creating beautiful and inspiring things with some lines of code__.
 
-My main goal with this website, is to learn. This is my playground. Here, I hope I'll be experimenting all sorts of resources for front end development and designing.
+My main goal with this website is to learn much more about about the whole JS world. But also, to teach things I already know.
+Here, I hope I'll be experimenting all sorts of resources for front end development and designing.
 
 You're more than welcome to follow me through my continuous learning path. Also, would be very nice if you could contribute with content!
