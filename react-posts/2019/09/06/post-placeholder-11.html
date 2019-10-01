@@ -8,7 +8,7 @@
 
   <title>senseCode</title>
   <meta name="description"
-    content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+    content="... renderSquare(i) { return ( &amp;lt;Square value={this.props.squares[i]} onClick={() =&amp;gt; this.props.onClick(i)} /&amp;gt; ); } ...">
   <meta name="author" content="Rogério B. Huss">
 
   <!-- styles -->
@@ -209,37 +209,34 @@
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">A third post!</h1>
+      <h1 class="post-title" itemprop="name headline">Back to the future</h1>
       <p class="post-meta">
-        <time datetime="2017-08-28T22:14:14-03:00" itemprop="datePublished">
-           Aug 28, 2017
+        <time datetime="2019-09-06T22:14:14-03:00" itemprop="datePublished">
+           Sep 6, 2019
         </time>
         </p>
     </header>
 
     <div class="share-page">
     <span>Share this on &rarr;</span>
-    <a class="share-twitter" href="https://twitter.com/intent/tweet?text=A third post!&url=http://www.sensecode.io/js-posts/2017/08/28/first-post.html&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"></a>
-    <a class="share-facebook" href="https://facebook.com/sharer.php?u=http://www.sensecode.io/js-posts/2017/08/28/first-post.html" rel="nofollow" target="_blank" title="Share on Facebook"></a>
-    <a class="share-googleplus" href="https://plus.google.com/share?url=http://www.sensecode.io/js-posts/2017/08/28/first-post.html" rel="nofollow" target="_blank" title="Share on Google+"></a>
-    <a class="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.sensecode.io/js-posts/2017/08/28/first-post.html" rel="nofollow" target="_blank" title="Share on Linkedin"></a>
+    <a class="share-twitter" href="https://twitter.com/intent/tweet?text=Back to the future&url=http://www.sensecode.io/react-posts/2019/09/06/post-placeholder-11.html&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"></a>
+    <a class="share-facebook" href="https://facebook.com/sharer.php?u=http://www.sensecode.io/react-posts/2019/09/06/post-placeholder-11.html" rel="nofollow" target="_blank" title="Share on Facebook"></a>
+    <a class="share-googleplus" href="https://plus.google.com/share?url=http://www.sensecode.io/react-posts/2019/09/06/post-placeholder-11.html" rel="nofollow" target="_blank" title="Share on Google+"></a>
+    <a class="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.sensecode.io/react-posts/2019/09/06/post-placeholder-11.html" rel="nofollow" target="_blank" title="Share on Linkedin"></a>
 </div>
 
     <div class="post-content" itemprop="articleBody">
-      <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
-
+      
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">...</span>
+  <span class="nx">renderSquare</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">Square</span>
+        <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">squares</span><span class="p">[</span><span class="nx">i</span><span class="p">]}</span>
+        <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">onClick</span><span class="p">(</span><span class="nx">i</span><span class="p">)}</span>
+      <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+  <span class="p">...</span></code></pre></figure>
 
     </div>
 

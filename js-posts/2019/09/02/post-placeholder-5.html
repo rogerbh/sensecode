@@ -8,7 +8,7 @@
 
   <title>senseCode</title>
   <meta name="description"
-    content="This post is for those who would like to implement a column resizer to their websites. Something similar to the panels in jsfiddle.net">
+    content="I don’t wanna know your name. I don’t wanna know anything anything about you. You know what I do in those situations? You heard her she said get your meat ho...">
   <meta name="author" content="Rogério B. Huss">
 
   <!-- styles -->
@@ -209,10 +209,9 @@
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">Resizing Columns with css and js.
- A flexbox aproach.</h1>
+      <h1 class="post-title" itemprop="name headline">A second post!</h1>
       <p class="post-meta">
-        <time datetime="2019-09-02T09:14:14-03:00" itemprop="datePublished">
+        <time datetime="2019-09-02T22:14:14-03:00" itemprop="datePublished">
            Sep 2, 2019
         </time>
         </p>
@@ -220,132 +219,20 @@
 
     <div class="share-page">
     <span>Share this on &rarr;</span>
-    <a class="share-twitter" href="https://twitter.com/intent/tweet?text=Resizing Columns with css and js.
- A flexbox aproach.&url=http://www.sensecode.io/css-posts/2019/09/02/col-resize.html&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"></a>
-    <a class="share-facebook" href="https://facebook.com/sharer.php?u=http://www.sensecode.io/css-posts/2019/09/02/col-resize.html" rel="nofollow" target="_blank" title="Share on Facebook"></a>
-    <a class="share-googleplus" href="https://plus.google.com/share?url=http://www.sensecode.io/css-posts/2019/09/02/col-resize.html" rel="nofollow" target="_blank" title="Share on Google+"></a>
-    <a class="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.sensecode.io/css-posts/2019/09/02/col-resize.html" rel="nofollow" target="_blank" title="Share on Linkedin"></a>
+    <a class="share-twitter" href="https://twitter.com/intent/tweet?text=A second post!&url=http://www.sensecode.io/js-posts/2019/09/02/post-placeholder-5.html&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"></a>
+    <a class="share-facebook" href="https://facebook.com/sharer.php?u=http://www.sensecode.io/js-posts/2019/09/02/post-placeholder-5.html" rel="nofollow" target="_blank" title="Share on Facebook"></a>
+    <a class="share-googleplus" href="https://plus.google.com/share?url=http://www.sensecode.io/js-posts/2019/09/02/post-placeholder-5.html" rel="nofollow" target="_blank" title="Share on Google+"></a>
+    <a class="share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.sensecode.io/js-posts/2019/09/02/post-placeholder-5.html" rel="nofollow" target="_blank" title="Share on Linkedin"></a>
 </div>
 
     <div class="post-content" itemprop="articleBody">
-      <p>This post is for those who would like to implement a column resizer to their websites. Something similar to the panels in <a href="http://jsfiddle.net/">jsfiddle.net</a></p>
+      <p>I don’t wanna know your name. I don’t wanna know anything anything about you. You know what I do in those situations? You heard her she said get your meat hooks, off, uh please. Let’s go. Where the hell are they.</p>
 
-<pre>
-  <code class="language-css">
-    p { color: red }
-    
-    .some-class{
-      text-align:left;
-      font-size:16px;
-    }
-  </code>
-</pre>
+<p>Stop it. C’mon, open up, let me out of here, Yo. That’s for messing up my hair. Jesus, you smoke too? Yeah, exactly.</p>
 
-<pre>
-<code class="lang-javascript">
-  var isResizingCols = false,
-            isResizingMt = false,
-            isResizingBm = false;
+<p>Don’t say a word. Hey Biff, check out this guy’s life preserver, dork thinks he’s gonna drown. Stop it. Oh. What the hell is a gigawatt?</p>
 
-  $(function () {
-    var flexBasisVal;
-    var container = $('.flex-container'),
-        left = $('.flex-left-col'),
-        right = $('.flex-right-col'),
-        handle = $('#drag'),
-        handleMt = $('.dragMt'),
-        handleBm = $('.dragBm'),
-        fT = $('.flex-top'),
-        fM = $('.flex-middle'),
-        fB = $('.flex-bottom');
-
-    handle.on('mousedown', function (e) {
-        e.preventDefault();
-        isResizingCols = true;
-        isResizingMt = false;
-        isResizingBm = false;
-
-        $('<div id="dragMask"></div>').css('left', $('.flex-right-col').offset().left).appendTo('.flex-right-col');
-
-    });
-
-    handleMt.on('mousedown', function (e) {
-        e.preventDefault();
-        isResizingCols = false;
-        isResizingMt = true;
-        isResizingBm = false;
-
-        $('<div class="drag-rows"></div>').css('top', $('.flex-middle').offset().top).appendTo('.flex-middle');
-
-    });
-
-    handleBm.on('mousedown', function (e) {
-        e.preventDefault();
-        isResizingCols = false;
-        isResizingMt = false;
-        isResizingBm = true;
-
-        $('<div class="drag-rows"></div>').css('top', $('.flex-bottom').offset().top).appendTo('.flex-bottom');
-
-    });
-
-    $(document).on('mousemove', function (e) {
-        e.preventDefault();
-        // não fazer nada quando não estiver redimensionando
-        if (!isResizingCols &amp;&amp; !isResizingMt &amp;&amp; !isResizingBm)
-            return;
-
-        if (isResizingCols) {
-
-            if (((e.clientX / $('.flex-container').width()) * 100 &gt;= 20) &amp;&amp;
-                ((e.clientX / $('.flex-container').width()) * 100 &lt;= 80))
-                flexBasisVal = (e.clientX / $('.flex-container').width()) * 100;
-
-            $('#dragMask').css({ 'left': e.clientX });
-        }
-        else if (isResizingMt || isResizingBm) {
-            $('.drag-rows').css({ 'top': e.clientY });
-            flexBasisHeightVal = (e.clientY / $('.flex-container').height()) * 100;
-        }
-
-    }).on('mouseup', function (e) {
-        $('.drag-rows').remove();
-        if (isResizingCols) {
-            $('#dragMask').remove();
-            left.animate({ 'flex-basis': (flexBasisVal) + '%' }, 100);
-            right.animate({ 'flex-basis': (100 - flexBasisVal) + '%' }, 100);
-        }
-
-        if (isResizingMt) {
-            fB.css({
-                'flex-grow': 1,
-                'flex-shrink': 1
-            });
-            fT.animate({ 'flex-shrink': 1, 'flex-grow': 1, 'flex-basis': (flexBasisHeightVal) + '%' }, 100);
-            fM.animate({ 'flex-shrink': 1, 'flex-grow': 1, 'flex-basis': ((100 - flexBasisHeightVal) - parseInt(fB.css('flex-basis').slice(0, -1))) + '%' }, 100);
-        }
-        else if (isResizingBm) {
-            fT.css({
-                'flex-grow': 1,
-                'flex-shrink': 1
-            });
-            fM.animate({ 'flex-shrink': 1, 'flex-grow': 1, 'flex-basis': (flexBasisHeightVal) + '%' }, 100);
-            fB.animate({ 'flex-shrink': 1, 'flex-grow': 1, 'flex-basis': ((100 - flexBasisHeightVal) - parseInt(fT.css('flex-basis').slice(0, -1))) + '%' }, 100);
-        }
-
-        // parar o redimensionamento
-        setTimeout(function () {
-            isResizingCols = false;
-            isResizingMt = false;
-            isResizingBm = false;
-            console.log('left col now is: ' + left.css('flex-basis') + ' &amp; ' + 'right col now is: ' + right.css('flex-basis') + ' is resizing: ' + isResizingCols);
-        }, 110);
-    });
-        });            
-</code>
-</pre>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">  <span class="kr">const</span> <span class="nx">someVarName</span> <span class="o">=</span> <span class="kc">null</span></code></pre></figure>
 
 
     </div>
