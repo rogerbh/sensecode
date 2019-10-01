@@ -1,27 +1,23 @@
 ---
 layout: post
-title:  "Post Placeholder 1"
+title:  "Let's do something that really cooks"
 date:   2019-09-01 22:14:14 -0300
 categories: html-posts
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+So anyway, George, now Lorraine, she really likes you. She told me to tell you that she wants you to ask her to the Enchantment Under The Sea Dance. Never mind that, never mind that now, never mind that, never mind- Brown, Brown, Brown, Brown, Brown, great, you're alive. Do you know where 1640 Riverside- You're gonna be in the car with her. you guys look great. Mom, you look so thin.
+
+Take that you mutated son-of-a-bitch. My pine, why you. You space bastard, you killed a pine. Uh? Hey kid, what you do, jump ship? I don't know, I can't keep up with all of your boyfriends. Right, George. Well, good luck you guys. Oh, one other thing, if you guys ever have kids and one of them when he's eight years old, accidentally sets fire to the living room rug, be easy on him.
 
 [//]: # ![My helpful screenshot]({{ "/images/cat.jpg" | absolute_url }})
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-[//]: # Jekyll also offers powerful support for code snippets:
+{% highlight html %}
+  <ul class="menu-list">
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+    <li onclick="void(0)">
+      <a class="navbar-item" href="{{ page.url }}">{{ page.title }}</a>
+    </li>
+
+  </ul>
 {% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/

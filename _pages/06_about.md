@@ -18,7 +18,7 @@ Here, I hope I'll be experimenting all sorts of resources for front end developm
 
 You're more than welcome to follow me through my continuous learning path. Also, would be very nice if you could contribute with content!
 
-Oi pessoal. Gostaria de compartilhar meu site pessoal com vocês. A ideia é postar material sobre design, desenvolvimento frontEnd e Experiência do Usuário. O conteúdo ainda é placeholder, mas já acho legal compartilhar, assim vocês podem conhecer um pouquinho mais do meu trabalho como designer de web. Todo o site foi criado e desenvolvido por mim (Nome, Logo, Layout, Estrutura, Código, etc.). Tem sido meu dever de casa nas últimas semanas. Espero que gostem!
-Durante minhas férias, tentarei criar alguns posts. Ah! Os Devs que quiserem contribuir com conteúdo, é só falar comigo.
+Oi pessoal. Gostaria de compartilhar meu site pessoal com vocês. A ideia é postar material sobre design, desenvolvimento frontEnd e Experiência do Usuário. O conteúdo ainda é placeholder/fictício, mas já acho legal compartilhar, assim vocês podem conhecer um pouquinho mais do meu trabalho como designer de web. Todo o site foi criado e desenvolvido por mim (Nome, Logo, Layout, Estrutura, Código, etc.). Tem sido meu dever de casa nas últimas semanas. Espero que gostem!
+Durante minhas férias, tentarei criar alguns posts. Ah! Os Devs que quiserem colaborar com conteúdo, é só falar comigo.
 Segue o endereço: www.sensecode.io.
 

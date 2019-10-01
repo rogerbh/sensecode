@@ -646,8 +646,15 @@ h2.page-title{
   padding: 15px 5%;
 }
 
+.post-page-holder p{display: flex; justify-content: center;}
+
 .post-page-holder img{
   max-width: 100%;
+
+  &[alt=ReactRocks] {
+    max-width: 300px !important;
+    align-self: center;
+  }
 }
 
 .about-static-content{

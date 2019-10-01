@@ -1,25 +1,11 @@
 ---
 layout: post
-title:  "A first post!"
-date:   2017-08-28 22:14:14 -0300
-categories: js-posts
+title:  What do you mean you've seen this, it's brand new."
+date:   2019-09-03 22:14:14 -0300
+categories: css-posts
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Yeah well look, Marvin, Marvin, you gotta play. See that's where they kiss for the first time on the dance floor. And if there's no music, they can't dance, and if they can't dance, they can't kiss, and if they can't kiss, they can't fall in love and I'm history. I'm gonna get that son-of-a-bitch. Mr. McFly, Mr. McFly, this just arrived, oh hi Marty. I think it's your new book. What's that thing he's on? It's my dad.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Good evening, I'm Doctor Emmett Brown. I'm standing on the parking lot of Twin Pines Mall. It's Saturday morning, October 26, 1985, 1:18 a.m. and this is temporal experiment number one. C'mon, Einy, hey hey boy, get in there, that a boy, in you go, get down, that's it. I can't play. That's right, he's gonna be mayor. Uh, Doc. George.
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Something that really cooks. Alright, alright this is an oldie, but uh, it's an oldie where I come from. Alright guys, let's do some blues riff in b, watch me for the changes, and uh, try and keep up, okay. Great Scott. Let me see that photograph again of your brother. Just as I thought, this proves my theory, look at your brother. You'll find out. Get your meat hooks off of me. But I can't go to the dance, I'll miss my favorite television program, Science Fiction Theater.

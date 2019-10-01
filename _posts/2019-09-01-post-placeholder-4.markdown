@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Some Js Post"
+title:  "A simple css post example"
 date:   2019-09-01 22:14:14 -0300
-category: js-posts
+category: html-posts
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Back to the future. George. George. I don't wanna see you in here again. Well that's your name, isn't it? Calvin Klein. it's written all over your underwear. Oh, I guess they call you Cal, huh? Perfect, just perfect.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Well, I figured, what the hell. Children. What? Ho, you mean you're gonna touch her on her- Dammit, Doc, why did you have to tear up that letter? If only I had more time. Wait a minute, I got all the time I want I got a time machine, I'll just go back and warn him. 10 minutes oughta do it. Time-circuits on, flux-capacitor fluxing, engine running, alright. No, no no no no, c'mon c'mon. C'mon c'mon, here we go, this time. Please, please, c'mon.
 
-Jekyll also offers powerful support for code snippets:
+Don't tell me anything. It's already mutated into human form, shoot it. Stop it. Doc. Why am I always the last one to know about these things.

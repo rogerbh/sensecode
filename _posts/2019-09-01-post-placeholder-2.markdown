@@ -2,24 +2,28 @@
 layout: post
 title:  "Resizing Columns with css and js.\n
 A flexbox aproach."
-date:   2019-09-02 09:14:14 -0300
-category: css-posts
+date:   2019-09-01 09:14:14 -0300
+category: js-posts
 ---
-This post is for those who would like to implement a column resizer to their websites. Something similar to the panels in [jsfiddle.net](http://jsfiddle.net/)
 
-<pre>
-  <code class="language-css">
+## This is just a test to check how the markdown format handles some text styling.
+
+Uh, Lorraine. How did you know I was here? I don't wanna know your name. I don't wanna know anything anything about you. Let's put him in there. Remember, fellas, the future is in your hands. If you believe in progress, re-elect Mayor Red Thomas, progress is his middle name. Mayor Red Thomas's progress platform means more jobs, better education, bigger civic improvements, and lower taxes. On election day, cast your vote for a proven leader, re-elect Mayor Red Thomas... Whoa, wait, Doc.
+
+Great good, good, Lorraine, I had a feeling about you two. George, aren't you gonna kiss me? Huh? No, Biff, you leave her alone. Flux capacitor.
+
+Yeah well, I saw it on a rerun. Can I go now, Mr. Strickland? Believe me, Marty, you're better off not having to worry about all the aggravation and headaches of playing at that dance. Okay Doc, this is it. Now, of course not, Biff, now, I wouldn't want that to happen.
+
+{% highlight css %}
     p { color: red }
     
     .some-class{
       text-align:left;
       font-size:16px;
     }
-  </code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="lang-javascript">
+{% highlight js %}
   var isResizingCols = false,
             isResizingMt = false,
             isResizingBm = false;
@@ -118,6 +122,5 @@ This post is for those who would like to implement a column resizer to their web
             console.log('left col now is: ' + left.css('flex-basis') + ' & ' + 'right col now is: ' + right.css('flex-basis') + ' is resizing: ' + isResizingCols);
         }, 110);
     });
-        });            
-</code>
-</pre>
+});            
+{% endhighlight %}
