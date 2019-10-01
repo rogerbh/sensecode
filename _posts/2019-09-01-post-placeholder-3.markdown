@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A fourth post!"
+title:  "Post Placeholder 3"
 date:   2017-08-28 22:14:14 -0300
 category: css-posts
 ---

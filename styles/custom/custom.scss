@@ -515,7 +515,7 @@ h2.page-title{
       }
 
       h4.no-posts-msg > span{
-        border-radius:8px;display: inline-block; transform: rotate(-5deg) translateX(15px);
+        border-radius:8px;display: inline-block; transform:translateX(15px);
         opacity: 0;
 
         animation-name: noPostsAnime1;
@@ -532,10 +532,11 @@ h2.page-title{
       h3.no-posts-msg{
         margin-bottom: 15px; margin-top: 0;
         span{
-          border-bottom-right-radius:8px;
-          border-bottom-left-radius:8px;
+          // border-bottom-right-radius:8px;
+          // border-bottom-left-radius:8px;
+          border-radius:8px;
           display: inline-block;
-          transform: rotate(-5deg) translateX(25px);
+          transform: translateX(25px);
           opacity: 0;
 
           animation-name: noPostsAnime2;
@@ -551,22 +552,22 @@ h2.page-title{
 
 @keyframes noPostsAnime1 {
   from{
-    transform: rotate(-5deg) translateX(15px);
+    transform: translateX(15px);
     opacity: 0;
   }
   to{
-    transform: rotate(-5deg) translateX(-35px);
+    transform: translateX(-35px);
     opacity: 1;
   }
 }
 
 @keyframes noPostsAnime2 {
   from{
-    transform: rotate(-5deg) translateX(25px);
+    transform: translateX(25px);
     opacity: 0;
   }
   to{
-    transform: rotate(-5deg) translateX(75px);
+    transform: translateX(75px);
     opacity: 1;
   }
 }
