@@ -479,7 +479,6 @@ h2.page-title {
   padding: 15px;
   flex: 1;
   flex-direction: column;
-  justify-content: center;
   color: #999;
   border-bottom-style: solid;
   border-bottom-width: 1px;
