@@ -711,6 +711,7 @@ h2.page-title {
 .post-page-holder p {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .post-page-holder img {
