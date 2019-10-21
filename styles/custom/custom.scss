@@ -314,7 +314,7 @@ h2.page-title {
   }
 
   > span > span {
-    color: tomato;
+    // color: tomato;
     font-family: inherit;
     // &::before{
     //   font-family: 'Font Awesome 5 Free';
@@ -430,7 +430,7 @@ h2.page-title {
   justify-content: flex-start;
 
   li {
-    /*      
+    /*
       A propriedade transform com o valor translateZ somente é utilizada aqui
       para forçar o Chrome a usar aceleração de hardware, evitando bugs na animação
     */
@@ -557,17 +557,19 @@ h2.page-title {
       font-weight: unset;
       background: none;
       font-size: unset;
-      color: #fff;
+      color: #333;
     }
 
     span {
-      background: #333;
-      color: #fff;
+      background: none;
+      color: #333;
       padding: 5px;
     }
 
     i {
       color: #ffde0c;
+      background-color: #333;
+      border-radius: 100%;
     }
   }
 
@@ -588,6 +590,8 @@ h2.page-title {
       border-radius: 8px;
       color: #555;
     }
+
+    i{padding: 1px 1px 0px;}
   }
 
   h3.no-posts-msg {
@@ -607,6 +611,8 @@ h2.page-title {
       animation-fill-mode: forwards;
       animation-delay: 0.5s;
     }
+
+    i{padding: 0px 1px 1px;}
   }
 }
 
@@ -707,6 +713,31 @@ h2.page-title {
   margin: 0;
   padding: 15px 5%;
 }
+
+// .post-page-holder blockquote{
+//   position: relative;
+//   z-index: 0;
+//   &::before{
+//     color: #ddd;
+//     font-family: 'Dancing Script', cursive;
+//     font-size: 120px;
+//     content: '\201D';
+//     position: absolute;
+//     top: 20px;
+//     left: -40px;
+//     z-index: -1;
+//   }
+//   &::after{
+//     color: #ddd;
+//     font-family: 'Dancing Script', cursive;
+//     font-size: 120px;
+//     content: '\201D';
+//     position: absolute;
+//     bottom: -40px;
+//     right: 0;
+//     z-index: -1;
+//   }
+// }
 
 // .post-page-holder p {
 //   display: flex;
@@ -860,6 +891,12 @@ h2.page-title {
     animation-delay: 0.15s;
   }
 }
+
+#skillslanguages, #learningtrying{
+ color: #209c97;
+ font-weight: bold;
+}
+#learningtrying{margin-top: 15px;}
 
 @keyframes meChildOut {
   from {
@@ -1044,8 +1081,10 @@ h2.page-title {
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 767px) {
   .slogan-home {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 20px;
+    padding-top: 5px;
+    text-align: center;
+    // font-weight: bold;
     > span {
       flex: 1;
     }
@@ -1178,7 +1217,8 @@ h2.page-title {
     .brand-link {
       width: 100%;
       align-items: center;
-      padding: 15px 0;
+      padding: 15px 0 75px;
+      align-self: flex-start;
     }
 
     .btn-toggle-menu {
