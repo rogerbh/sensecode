@@ -1115,6 +1115,19 @@ h2.page-title {
     }
   }
 
+  .post-page-holder img {
+    max-width: 70%;
+  
+    &.feat-img {
+      max-width: 70%;
+    }
+  
+    &[alt="ReactRocks"] {
+      max-width: 70% !important;
+      // align-self: center;
+    }
+  }
+
   .post-header {
     .post-title {
       margin: 0 15px 0 0;
