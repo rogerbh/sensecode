@@ -4,6 +4,8 @@ title:  "Resizing Columns with css and js.\n
 A flexbox aproach."
 date:   2019-09-01 09:14:14 -0300
 category: js-posts
+featured-image: js-logo.jpeg
+featured-image-alt: Learn how to resize columns with js.
 ---
 
 ## This is just a test to check how the markdown format handles some text styling.

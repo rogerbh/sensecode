@@ -19,6 +19,10 @@ layout: default
     {% include share.html %}
 
     <div class="post-content" itemprop="articleBody">
+        {% if page.featured-image %}
+          {% include featured-image.html image=page.featured-image alt=page.featured-image-alt %}
+        {% endif %}
+
       {{ content }}
     </div>
 
