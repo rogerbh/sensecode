@@ -714,12 +714,10 @@ h2.page-title {
   padding: 15px 5%;
 }
 
-/* line 763, ../custom.scss */
-.post-page-holder p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: justify;
+/* line 765, ../custom.scss */
+.post-page-holder h6 {
+  text-align: center;
+  margin: 0;
 }
 /* line 770, ../custom.scss */
 .post-page-holder img {
