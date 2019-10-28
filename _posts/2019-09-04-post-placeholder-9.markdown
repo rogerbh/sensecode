@@ -4,8 +4,8 @@ title:  "Time machine, I haven't invented any time machine."
 date:   2019-09-04 22:14:14 -0300
 category: react-posts
 ---
-
-![ReactRocks]({{ "/images/react-img.png" | absolute_url }})
+[//]: # Colocar todas as imagens dentro de h6 para centralizar
+###### ![ReactRocks]({{ "/images/react-img.png" | absolute_url }})
 
 What's the meaning of this. I had a horrible nightmare, dreamed I went back in time, it was terrible. You'll find out. And where's my reports? I'd like you to meet my good friend George McFly.
 
