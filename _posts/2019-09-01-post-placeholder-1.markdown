@@ -3,6 +3,8 @@ layout: post
 title:  "Let's do something that really cooks"
 date:   2019-09-01 22:14:14 -0300
 categories: html-posts
+featured-image: js-logo.jpeg
+featured-image-alt: Learn how to resize columns with js.
 ---
 
 So anyway, George, now Lorraine, she really likes you. She told me to tell you that she wants you to ask her to the Enchantment Under The Sea Dance. Never mind that, never mind that now, never mind that, never mind- Brown, Brown, Brown, Brown, Brown, great, you're alive. Do you know where 1640 Riverside- You're gonna be in the car with her. you guys look great. Mom, you look so thin.

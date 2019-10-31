@@ -548,7 +548,7 @@ h2.page-title {
     }
 
     .feat-img {
-      max-width: 50%;
+      max-width: 250px;
       margin: 15px 0;
     }
   }
@@ -760,9 +760,8 @@ h2.page-title {
 // }
 
 .post-page-holder {
-
   //Somente usar o h6 para colocar imagens dentro, de forma centralizada.
-  h6{
+  h6 {
     text-align: center;
     margin: 0;
   }
@@ -1508,6 +1507,12 @@ h2.page-title {
 
         animation-name: none;
       }
+    }
+  }
+
+  .content-col .post-list li {
+    .feat-img {
+      max-width: 50%;
     }
   }
 }
