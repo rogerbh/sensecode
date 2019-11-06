@@ -23,11 +23,19 @@
           <div class="col-xs-12" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
 
             <ul class="menu-list" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
-              {% for page in site.pages %} {% if page.title %}
+              <!-- {% for page in site.pages %} {% if page.title %}
               <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
                 <a class="navbar-item" href="{{ page.url }}">{{ page.title }}</a>
               </li>
-              {% endif %} {% endfor %}
+              {% endif %} {% endfor %} -->
+
+              {% for item in site.data.navigation %}
+              <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
+                <a class="navbar-item {% if item.link == page.url %}current-page{% endif %}" href="{{ item.link }}">
+                    {{ item.name }}
+                  </a>
+              </li>
+              {% endfor %}
             </ul>
 
           </div>

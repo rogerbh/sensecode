@@ -3,6 +3,8 @@ layout: post
 title:  "This sounds pretty heavy"
 date:   2019-09-05 09:14:14 -0300
 category: css-posts
+featured-image: random-img1.jpg
+featured-image-alt: Just an alt text example.
 ---
 So tell me, future boy, who's president of the United States in 1985? you guys look great. Mom, you look so thin. I guarantee it. Alright, take it up, go. Doc. The hell you doing to my car?
 

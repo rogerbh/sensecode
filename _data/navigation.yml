@@ -1,0 +1,14 @@
+- link: /ux/
+  name: User Experience
+- link: /html/
+  name: HTML
+- link: /css/
+  name: CSS
+- link: /js/
+  name: Javascript
+- link: /react/
+  name: React
+- link: /vue/
+  name: VueJs
+- link: /about/
+  name: About  
