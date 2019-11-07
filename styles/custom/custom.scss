@@ -13,6 +13,7 @@ font-family: 'Old Standard TT', serif;
 font-family: 'Lustria', serif;
 font-family: 'Swanky and Moo Moo', cursive;
 font-family: 'Karma', serif;
+font-family: 'Rubik', sans-serif;
 */
 
 .site-holder {
@@ -166,31 +167,62 @@ h2.page-title {
   li {
     display: flex;
     flex: 1;
-    border-bottom: solid 1px #ddd;
+    // border-bottom: solid 1px #ddd;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.07);
     overflow: hidden;
     position: relative;
-    &:nth-child(1) a:hover {
-      background: #e02e6d !important;
+    &:nth-child(1) {
+      z-index: 7;
+      a:hover,.current-page {
+        background: #e02e6d !important;
+      }
     }
-    &:nth-child(2) a:hover {
-      // background-color: #3158ab !important;
-      background: #ff8e34 !important;
+    &:nth-child(2) {
+      z-index: 6;
+      a:hover,.current-page {
+        // background-color: #3158ab !important;
+        background: #ff8e34 !important;
+      }
     }
-    &:nth-child(3) a:hover {
-      background: #1370b0 !important;
+    &:nth-child(3) {
+      z-index: 5;
+      a:hover,.current-page {
+        background: #1370b0 !important;
+      }
     }
-    &:nth-child(4) a:hover {
-      background: #ffba34 !important;
+    &:nth-child(4) {
+      z-index: 4;
+      a:hover,.current-page {
+        background: #ffba34 !important;
+      }
     }
-    &:nth-child(5) a:hover {
-      background: #61dafb !important;
+    &:nth-child(5) {
+      z-index: 3;
+      a:hover,.current-page {
+        background: #61dafb !important;
+      }
     }
-    &:nth-child(6) a:hover {
-      background: #41b883 !important;
+    &:nth-child(6) {
+      z-index: 2;
+      a:hover,.current-page {
+        background: #41b883 !important;
+      }
+    }
+    &:last-child {
+      z-index: 1;
+      a {
+        font-weight: bold;
+      }
     }
   }
 
   li a {
+    will-change: transform, opacity;
+
+    // -webkit-transform: translateZ(0) scale(1, 1);
+    // -moz-transform: translateZ(0) scale(1, 1);
+    // transform: translateZ(0) scale(1, 1);
+
     @extend .flex-combo;
     // font-family: 'Roboto Condensed', sans-serif;
     font-family: "Nunito", sans-serif;
@@ -198,7 +230,7 @@ h2.page-title {
     text-align: right;
     transition-property: background-color, color, padding-right;
     transition: 0.2s ease;
-    background-color: #eee;
+    background-color: #f3f3f3;
     // background: linear-gradient(to right, rgba(238,238,238,1) 0%, rgba(246,246,246,0.27) 73%, rgba(255,255,255,0) 100%);
     color: #444;
     display: flex;
@@ -214,6 +246,11 @@ h2.page-title {
       background-color: #209c97;
       padding-right: 30px;
     }
+    &.current-page{
+      color: #fff;
+      background-color: #209c97;
+      padding-right: 30px;
+    }
 
     -webkit-box-shadow: inset -21px 0px 4px -20px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: inset -21px 0px 4px -20px rgba(0, 0, 0, 0.1);
@@ -221,6 +258,12 @@ h2.page-title {
   }
 
   li a::before {
+    -webkit-transform: translateZ(0) scale(1, 1);
+    -moz-transform: translateZ(0) scale(1, 1);
+    transform: translateZ(0) scale(1, 1);
+
+    will-change: transform, opacity, left;
+
     font-family: "Font Awesome 5 Brands";
     font-weight: 400;
     position: absolute;
@@ -259,7 +302,8 @@ h2.page-title {
   }
 
   li a:hover::before,
-  li a:active::before {
+  li a:active::before,
+  li a.current-page::before {
     opacity: 1;
     left: 25px;
     transform: rotate(-20deg);
@@ -306,12 +350,18 @@ h2.page-title {
 
   width: 100%;
   font-family: "Nunito", sans-serif;
-  font-size: 30px;
+  font-size: 28px;
   color: #555;
   padding: 12px 15px 0 15px;
   margin: 5px 15px 35px 0;
   line-height: initial;
   text-align: right;
+
+  > span {
+    background-color: #4de3dd;
+    border-radius: 4px;
+    padding: 0 5px;
+  }
 
   span {
     font-family: "Nunito", sans-serif;
@@ -325,6 +375,20 @@ h2.page-title {
     //   font-weight: 900;
     //   content: '\f120';
     // }
+  }
+
+  &::before {
+    color: #209c97;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    content: "<";
+  }
+
+  &::after {
+    color: #209c97;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    content: "/>";
   }
 }
 
@@ -414,67 +478,117 @@ h2.page-title {
 }
 
 // gera nth-child para cada post para setar um animation-delay
-// .post-list{
-//   $steps: 0;
-//   @while $steps <= 50 {
-//       li:nth-child(#{$steps}) { animation-delay: #{'.'}$steps#{'s'} !important; }
-//       $steps: $steps + 1;
-//   }
-// }
+.post-list {
+  
+  $intSeconds:0;
+  $intSecondsB:0;
+
+  @for $i from 1 to 20 {
+
+    @if $i > 1 and $i < 11 {
+      $intSeconds: $intSeconds + 1;
+      li:nth-child(#{$i}) { animation-delay: #{'.'}$intSeconds#{'s'} !important; }
+
+    } @else if $i == 11 {
+      
+      li:nth-child(#{$i}) { animation-delay: 1s !important; }
+
+    } @else if $i > 11 and $i < 20 {
+      $intSecondsB: $intSecondsB + 1;
+      li:nth-child(#{$i}) { animation-delay: #{'1.'}$intSecondsB#{'s'} !important; }
+
+    }
+    
+  }
+}
 // fim gera nth-child para cada post para setar um animation-delay
 
 .post-list {
   @extend .flex-combo;
   list-style-type: none;
   list-style-position: inside;
-  padding: 15px;
+  padding: 15px 15px 15px 30px;
   padding-right: 0;
   margin: 0;
 
   justify-content: flex-start;
 
   li {
+    &.each-post-li {
+      will-change: transform, opacity;
+
+      transform: translateY(15px);
+      opacity: 0;
+
+      animation-name: postsIn;
+      animation-duration: 0.15s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      // animation-delay: 0.8s;
+    }
+
+    @keyframes postsIn {
+      from {
+        transform: translateY(15px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+
     /*
       A propriedade transform com o valor translateZ somente é utilizada aqui
       para forçar o Chrome a usar aceleração de hardware, evitando bugs na animação
     */
 
     background-color: transparent;
-    border-top: solid 1px;
+    // border-top: solid 1px;
     display: flex;
     flex: 1 1 auto;
     // flex: 0 1 auto;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 170px;
     margin-right: 30px;
     margin-bottom: 30px;
     // box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+
+    will-change: border-top, background-color, box-shadow, transform,
+      border-radius;
+
     -webkit-transform: translateZ(0) scale(1, 1);
     -moz-transform: translateZ(0) scale(1, 1);
     transform: translateZ(0) scale(1, 1);
     transition: all 0.15s ease-out;
-    overflow: hidden;
+    // overflow: hidden;
 
-    &:hover {
-      border-top: solid 3px;
-      background-color: #fff;
-      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.18);
-      transform: scale(1.01, 1.01);
-      border-radius: 4px;
-    }
     a {
+      will-change: border-bottom-width;
+
+      border-top: solid 1px;
+      border-bottom-color: transparent;
+
+      -webkit-transform: translateZ(0) scale(1, 1);
+      -moz-transform: translateZ(0) scale(1, 1);
+      transform: translateZ(0) scale(1, 1);
+
       /*transition: border-bottom-color .15s ease-out;*/
       transition: all 0.15s ease-out;
       display: flex;
       padding: 15px;
       flex: 1;
       flex-direction: column;
-      // justify-content: center;
+      justify-content: center;
       color: #999;
       border-bottom-style: solid;
       border-bottom-width: 1px;
       border-bottom-color: transparent;
+
+      background-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.075);
+      border-radius: 2px;
       .post-meta {
         &::before {
           font-family: "Font Awesome 5 Free";
@@ -494,6 +608,13 @@ h2.page-title {
       &:hover {
         text-decoration: none;
         border-bottom-width: 3px;
+
+        border-top: solid 3px;
+        background-color: #fff;
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+        transform: scale(1.01, 1.01);
+        border-radius: 4px;
+
         h2 {
           color: #209c97;
         }
@@ -520,35 +641,21 @@ h2.page-title {
       .post-resume {
         color: #555;
         margin: 0;
+        padding-right: 15px;
       }
     }
     &:first-child {
       flex: 1 0 50% !important;
+    }
 
-      // Estilo para representar o post em destaque, com um flag
-
-      // a::before{
-      //   position: absolute;
-      //   font-family: 'Font Awesome 5 Free';
-      //   font-weight: 900;
-      //   content: '\f02e';
-      //   color: #ffba34;
-      //   top: -3px;
-      //   right: 20px;
-      //   font-size: 30px;
-      //   line-height: normal;
-      //   transition: all .15s ease-out;
-      // }
-      // a:hover::before{
-      //   top: -5px;
-      //   font-size: 35px;
-      // }
-
-      // FIM --- Estilo para representar o post em destaque, com um flag
+    &:last-child {
+      flex-basis: 40% !important;
+      flex-grow: 0;
+      flex-shrink: 1;
     }
 
     .feat-img {
-      max-width: 50%;
+      max-width: 250px;
       margin: 15px 0;
     }
   }
@@ -760,9 +867,8 @@ h2.page-title {
 // }
 
 .post-page-holder {
-
   //Somente usar o h6 para colocar imagens dentro, de forma centralizada.
-  h6{
+  h6 {
     text-align: center;
     margin: 0;
   }
@@ -772,8 +878,8 @@ h2.page-title {
 
     &.feat-img {
       align-self: center;
-      max-width: 300px;
-      margin-bottom: 15px;
+      max-width: 400px;
+      margin-bottom: 30px;
       border: solid 5px #fff;
       border-radius: 4px;
       box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
@@ -931,6 +1037,30 @@ h2.page-title {
 }
 #learningtrying {
   margin-top: 15px;
+}
+
+.what-moves-me {
+  margin-top: 15px;
+  min-height: 150px;
+  // color:#d1513d;
+  color: #209c97;
+  position: relative;
+  padding-left: 55px;
+  padding-right: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-size: 24px;
+
+  background-image: url(../../../img/quote-l.svg), url(../../../img/quote-r.svg);
+  background-position: left top, right 50px bottom 25px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 40px, 70px;
+
+  span {
+    font-family: "Quicksand", sans-serif;
+  }
 }
 
 @keyframes meChildOut {
@@ -1116,12 +1246,14 @@ h2.page-title {
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 767px) {
   .slogan-home {
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 5px;
     text-align: center;
     // font-weight: bold;
     > span {
       flex: 1;
+      border-bottom-left-radius: 0px;
+      border-top-right-radius: 0px;
     }
   }
 
@@ -1510,6 +1642,24 @@ h2.page-title {
       }
     }
   }
+
+  .content-col .post-list li {
+    .feat-img {
+      max-width: 50%;
+    }
+  }
+
+  .what-moves-me {
+    margin-top: 15px;
+    min-height: 150px;
+    // color:#d1513d;
+    color: #209c97;
+    position: relative;
+    padding-left: 45px;
+    padding-right: 45px;
+    background-size: 30px, 70px;
+    background-position: left top, right bottom !important;
+  }
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
@@ -1562,6 +1712,7 @@ h2.page-title {
   padding: 3px 10px;
   margin-bottom: 15px;
   font-family: "Pontano Sans", sans-serif;
+  z-index: 1;
 
   a {
     padding: 0 5px;
@@ -1593,6 +1744,27 @@ h2.page-title {
       content: "\f0e1";
     }
   }
+}
+
+.pagination a,
+.pagination span {
+  padding: 7px 18px;
+  border: 1px solid #eee;
+  margin-left: -2px;
+  margin-right: -2px;
+  background-color: #ffffff;
+  display: inline-block;
+}
+
+.pagination a {
+  &:hover {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+}
+
+.pagination {
+  text-align: center;
 }
 
 // Import partials.
