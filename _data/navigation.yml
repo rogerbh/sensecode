@@ -1,14 +1,21 @@
 - link: /ux/
   name: User Experience
+  category: ux-posts
 - link: /html/
   name: HTML
+  category: html-posts
 - link: /css/
   name: CSS
+  category: css-posts
 - link: /js/
   name: Javascript
+  category: js-posts
 - link: /react/
   name: React
+  category: react-posts
 - link: /vue/
   name: VueJs
+  category: vue-posts
 - link: /about/
-  name: About  
+  name: About
+  category: about-me

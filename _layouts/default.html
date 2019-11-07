@@ -31,7 +31,7 @@
 
               {% for item in site.data.navigation %}
               <li onclick="void(0)" style="display: flex;justify-content: center;flex-direction: column;flex: 1;">
-                <a class="navbar-item {% if item.link == page.url %}current-page{% endif %}" href="{{ item.link }}">
+                <a class="navbar-item {% if item.link == page.url or page.url contains item.category %}current-page{% endif %}" href="{{ item.link }}">
                     {{ item.name }}
                   </a>
               </li>
